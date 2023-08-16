@@ -13,7 +13,6 @@
 
     # CLI
     cd ~/local/codeql-workshop-sql-injection-java
-    codeql pack install solutions
     codeql pack install session
   #+END_SRC
 
