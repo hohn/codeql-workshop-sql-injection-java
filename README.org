@@ -7,7 +7,9 @@
 * Setup
   #+BEGIN_SRC sh :session shared :results output 
     cd ~/local
-    git clone
+    git clone git@github.com:hohn/codeql-workshop-sql-injection-java.git
+    # or
+    git clone https://github.com/hohn/codeql-workshop-sql-injection-java.git
 
     # CLI
     cd ~/local/codeql-workshop-sql-injection-java
