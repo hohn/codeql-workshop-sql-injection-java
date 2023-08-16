@@ -1,0 +1,119 @@
+* Develop the query bottom-up
+  1. Identify the /source/ part of the 
+     : System.console().readLine();
+     expression, the =buf= argument.  
+     Start from a =from..where..select=, then convert to a predicate.
+
+  2. Identify the /sink/ part of the
+     : conn.createStatement().executeUpdate(query);
+     expression, the =query= argument.  Again start from =from..where..select=,
+     then convert to a predicate.
+
+  3. Fill in the /taintflow configuration/ boilerplate
+     XX: update for new module approach;
+     See ~/local/codeql-workshop-dataflow-c/exercises/Exercise16.ql     
+     [[file:~/local/codeql-workshop-dataflow-c/exercises/Exercise16.ql::module InputTypesToTypeValidation = DataFlow::Make<InputTypesToTypeValidationConfig>;]]
+     or
+     [[file:~/local/codeql-workshop-dataflow-c/solutions/Exercise16.ql::module InputTypesToTypeValidation = DataFlow::Make<InputTypesToTypeValidationConfig>;]]
+
+     #+BEGIN_SRC java
+       class SqliFlowConfig extends TaintTracking::Configuration {
+           SqliFlowConfig() { this = "SqliFlow" }
+
+           override predicate isSource(DataFlow::Node node) {
+               none()
+                   }
+
+           override predicate isSink(DataFlow::Node node) {
+               none()
+                   }
+       }
+     #+END_SRC
+
+  The final query (without =isAdditionalTaintStep=) is
+  #+BEGIN_SRC java
+    /**
+     ,* @name SQLI Vulnerability
+     ,* @description Using untrusted strings in a sql query allows sql injection attacks.
+     ,* @kind path-problem
+     ,* @id java/SQLIVulnerable
+     ,* @problem.severity warning
+     ,*/
+
+    import java
+    import semmle.code.java.dataflow.TaintTracking
+    import DataFlow::PathGraph
+
+    class SqliFlowConfig extends TaintTracking::Configuration {
+        SqliFlowConfig() { this = "SqliFlow" }
+
+        override predicate isSource(DataFlow::Node source) {
+           // System.console().readLine();
+           exists(Call read |
+               read.getCallee().getName() = "readLine" and
+               read = source.asExpr()
+           )
+       }
+
+        override predicate isSink(DataFlow::Node sink) {
+           // conn.createStatement().executeUpdate(query);
+           exists(Call exec |
+               exec.getCallee().getName() = "executeUpdate" and
+               exec.getArgument(0) = sink.asExpr()
+           )
+       }
+    }
+
+    from SqliFlowConfig conf, DataFlow::PathNode source, DataFlow::PathNode sink
+    where conf.hasFlowPath(source, sink)
+    select sink, source, sink, "Possible SQL injection"
+  #+END_SRC
+
+* Optional: sarif file review of the results
+  Query results are available in several output formats using the cli.  The
+  following produces the sarif format, a json-based result description.
+
+  #+BEGIN_SRC sh
+    # The setup information from before
+    export PATH=$HOME/local/vmsync/codeql250:"$PATH"
+    SRCDIR=$HOME/local/codeql-training-material.java-sqli/java/codeql-dataflow-sql-injection
+    DB=$SRCDIR/java-sqli-$(cd $SRCDIR && git rev-parse --short HEAD)
+
+    # Check paths
+    echo $DB
+    echo $SRCDIR
+
+    # To see the help
+    codeql database analyze -h
+
+    # Run a query
+    codeql database analyze                         \
+           -v                                       \
+           --ram=14000                              \
+           -j12                                     \
+           --rerun                                  \
+           --search-path ~/local/vmsync/ql          \
+           --format=sarif-latest                    \
+           --output java-sqli.sarif                 \
+           --                                       \
+           $DB                                      \
+           $SRCDIR/SqlInjection.ql
+
+    # Examine the file in an editor
+    edit java-sqli.sarif
+  #+END_SRC
+
+  An example of using the sarif data is in the the jq script [[./sarif-summary.jq]].
+  When run against the sarif input via 
+  #+BEGIN_SRC sh
+    jq --raw-output --join-output  -f sarif-summary.jq < java-sqli.sarif > java-sqli.txt
+  #+END_SRC
+  it produces output in a form close to that of compiler error messages:
+  #+BEGIN_SRC text
+    query-id: message line 
+        Path
+           ...
+        Path
+           ...
+  #+END_SRC
+   

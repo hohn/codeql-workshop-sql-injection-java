@@ -1,0 +1,7 @@
+* SQL injection example
+  This is an introductory codeql workshop for Java.
+  1. The problem and its source code are in [[./src]] along with a full description in
+     [[./src/README.org]].
+  2. The developed queries are in [[./solutions]] and their tests in [[./tests]].  The
+     derivation of those queries is described in [[./solutions/README.org]]
+
