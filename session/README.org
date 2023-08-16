@@ -15,59 +15,9 @@
       expression, the =query= argument.  Again start from =from..where..select=,
       then convert to a predicate.
 
-   3. Fill in the /taintflow configuration/ boilerplate
-      #+BEGIN_SRC java
-        class SqliFlowConfig extends TaintTracking::Configuration {
-            SqliFlowConfig() { this = "SqliFlow" }
+   3. Fill in the /taintflow configuration/ boilerplate.
 
-            override predicate isSource(DataFlow::Node node) {
-                none()
-                    }
-
-            override predicate isSink(DataFlow::Node node) {
-                none()
-                    }
-        }
-      #+END_SRC
-
-   The final query (without =isAdditionalTaintStep=) is
-   #+BEGIN_SRC java
-     /**
-      ,* @name SQLI Vulnerability
-      ,* @description Using untrusted strings in a sql query allows sql injection attacks.
-      ,* @kind path-problem
-      ,* @id java/SQLIVulnerable
-      ,* @problem.severity warning
-      ,*/
-
-     import java
-     import semmle.code.java.dataflow.TaintTracking
-     import DataFlow::PathGraph
-
-     class SqliFlowConfig extends TaintTracking::Configuration {
-         SqliFlowConfig() { this = "SqliFlow" }
-
-         override predicate isSource(DataFlow::Node source) {
-            // System.console().readLine();
-            exists(Call read |
-                read.getCallee().getName() = "readLine" and
-                read = source.asExpr()
-            )
-        }
-
-         override predicate isSink(DataFlow::Node sink) {
-            // conn.createStatement().executeUpdate(query);
-            exists(Call exec |
-                exec.getCallee().getName() = "executeUpdate" and
-                exec.getArgument(0) = sink.asExpr()
-            )
-        }
-     }
-
-     from SqliFlowConfig conf, DataFlow::PathNode source, DataFlow::PathNode sink
-     where conf.hasFlowPath(source, sink)
-     select sink, source, sink, "Possible SQL injection"
-   #+END_SRC
+   The final query is in [[./full-query.ql]]
 
 ** (optional) Review of the results via SARIF file 
    Query results are available in several output formats using the cli.  The
