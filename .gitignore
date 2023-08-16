@@ -1,2 +1,5 @@
 *~
 *.html
+*/codeql-pack.lock.yml
+*.class
+src/java-sqli-*

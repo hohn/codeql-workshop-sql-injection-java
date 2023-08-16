@@ -2,6 +2,18 @@
   This is an introductory codeql workshop for Java.
   1. The problem and its source code are in [[./src]] along with a full description in
      [[./src/README.org]].
-  2. The developed queries are in [[./solutions]] and their tests in [[./tests]].  The
-     derivation of those queries is described in [[./solutions/README.org]]
+  2. The query is developed in [[./session/README.org]]
 
+* Setup
+  #+BEGIN_SRC sh :session shared :results output 
+    cd ~/local
+    git clone
+
+    # CLI
+    cd ~/local/codeql-workshop-sql-injection-java
+    codeql pack install solutions
+    codeql pack install session
+  #+END_SRC
+
+  For VS Code, use
+  : command palette > install pack dependencies

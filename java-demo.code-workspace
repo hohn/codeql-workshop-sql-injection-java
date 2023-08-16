@@ -2,6 +2,10 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "[java-sqli-ddb5e54 source archive]",
+			"uri": "codeql-zip-archive://0-82/Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/src.zip"
 		}
 	],
 	"settings": {
