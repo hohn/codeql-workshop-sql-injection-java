@@ -1,0 +1,14 @@
+[2023-08-16 14:35:37] [javac-extractor-89669] Starting extraction for:
+                                              sun.java.command=com.semmle.extractor.java.JavaExtractor --jdk-version 13 --javac-args @@@/Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/log/ext/javac.args
+                                              user.dir=/Users/hohn/local/codeql-workshop-sql-injection-java/src
+[2023-08-16 14:35:37] [javac-extractor-89669] Compilation name /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/trap/java/diagnostics/diagnostic.trap.gz
+[2023-08-16 14:35:37] [javac-extractor-89669] Processing file AddUser.java
+[2023-08-16 14:35:39] [javac-extractor-89669] Processing module java.sql
+[2023-08-16 14:35:39] [javac-extractor-89669] Processing module java.base
+[2023-08-16 14:35:39] [javac-extractor-89669] Processing module java.xml
+[2023-08-16 14:35:39] [javac-extractor-89669] Processing module java.logging
+[2023-08-16 14:35:39] [javac-extractor-89669] Javac init time: 0.5s
+[2023-08-16 14:35:39] [javac-extractor-89669] Javac attr time: 0.1s
+[2023-08-16 14:35:39] [javac-extractor-89669] Extractor time: 2.0s
+[2023-08-16 14:35:39] [javac-extractor-89669] Other time: 0.1s
+[2023-08-16 14:35:39] [javac-extractor-89669] Total time: 2.7s

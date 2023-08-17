@@ -1,0 +1,10 @@
+---
+sourceLocationPrefix: /Users/hohn/local/codeql-workshop-sql-injection-java/src
+baselineLinesOfCode: 39
+unicodeNewlines: false
+columnKind: utf16
+primaryLanguage: java
+creationMetadata:
+  cliVersion: 2.13.5
+  creationTime: 2023-08-16T21:35:19.216010Z
+finalised: true

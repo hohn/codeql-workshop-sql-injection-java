@@ -1,0 +1,21 @@
+[2023-08-17 09:32:23] This is codeql database cleanup java-sqli-ddb5e54/
+[2023-08-17 09:32:23] Log file was started late.
+[2023-08-17 09:32:23] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2023-08-17 09:32:23] [PROGRESS] database cleanup> TRAP files cleaned up (5ms).
+[2023-08-17 09:32:23] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2023-08-17 09:32:23] [PROGRESS] database cleanup> Scratch directory cleaned up (0ms).
+[2023-08-17 09:32:23] Running plumbing command: codeql dataset cleanup --mode=normal -- /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/db-java
+[2023-08-17 09:32:23] [PROGRESS] dataset cleanup> Cleaning up dataset in /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/db-java.
+[2023-08-17 09:32:23] Trimming disk cache at /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/db-java/default/cache in mode normal.
+[2023-08-17 09:32:23] Sequence stamp origin is -6285556032456027747
+[2023-08-17 09:32:23] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2023-08-17 09:32:23] Unpausing evaluation
+[2023-08-17 09:32:23] Trimming completed (153ms): Trimmed disposable data from cache.
+[2023-08-17 09:32:23] Pausing evaluation to close the cache at sequence stamp o+1
+[2023-08-17 09:32:23] The disk cache is freshly trimmed; leave it be.
+[2023-08-17 09:32:23] Unpausing evaluation
+[2023-08-17 09:32:23] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2023-08-17 09:32:23] [PROGRESS] dataset cleanup> Finalizing dataset in /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/db-java
+[2023-08-17 09:32:23] [DETAILS] dataset cleanup> Finished deleting ID pool from /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-ddb5e54/db-java (0ms).
+[2023-08-17 09:32:23] Plumbing command codeql dataset cleanup completed.
+[2023-08-17 09:32:23] Exiting with code 0
