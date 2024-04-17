@@ -129,3 +129,11 @@
             ...
    #+END_SRC
    
+** (optional) Write query help
+   Help is included from a markdown file.  For a query =foo.ql= the file =foo.md=
+   is included in the SARIF output when the
+   : --sarif-include-query-help=always
+   flag is set.
+
+   To write such a help file, copy the template in [[./help-template.md]] and
+   customize the content.
