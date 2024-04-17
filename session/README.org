@@ -48,7 +48,6 @@
             --rerun                                  \
             --format=sarif-latest                    \
             --output java-sqli.sarif                 \
-            --sarif-include-query-help=always        \
             --                                       \
             $DB                                      \
             $SESSIONDIR/full-query.ql
@@ -71,3 +70,70 @@
             ...
    #+END_SRC
    
+** (optional) Include query help in the SARIF file 
+   Query results are available in several output formats using the cli.  The
+   following produces the sarif format, a json-based result description.  It
+   includes the markdown-formatted query help.
+
+   Requires [[file:~/local/codeql-workshop-sql-injection-java/src/README.org::*Build the codeql database][Build the codeql database]]
+
+   #+BEGIN_SRC sh
+     # The setup information from before
+     SRCDIR=$HOME/local/codeql-workshop-sql-injection-java
+     DB=$SRCDIR/java-sqli-$(cd $SRCDIR && git rev-parse --short HEAD)
+
+     # The directory containing the query
+     SESSIONDIR=$(pwd -P)
+
+     # Check paths
+     echo $DB
+     echo $SRCDIR
+
+     # Convert .qhelp to .md
+     codeql generate query-help                      \
+            --format=markdown                        \
+            -o full-query.md                         \
+            full-query.ql
+
+     # Run the query
+     codeql database analyze                         \
+            -v                                       \
+            --ram=14000                              \
+            -j12                                     \
+            --rerun                                  \
+            --format=sarif-latest                    \
+            --output java-sqli.sarif                 \
+            --sarif-include-query-help=always        \
+            --                                       \
+            $DB                                      \
+            $SESSIONDIR/full-query.ql
+
+     # Check for a substring of the help to make sure it's included
+     grep  -l 'solution' *
+
+     # Examine the file in an editor
+     edit java-sqli.sarif
+   #+END_SRC
+
+   An example of using the sarif data is in the the jq script [[./sarif-summary.jq]].
+   When run against the sarif input via 
+   #+BEGIN_SRC sh
+     jq --raw-output --join-output  -f sarif-summary.jq < java-sqli.sarif > java-sqli.txt
+   #+END_SRC
+   it produces output in a form close to that of compiler error messages:
+   #+BEGIN_SRC text
+     query-id: message line 
+         Path
+            ...
+         Path
+            ...
+   #+END_SRC
+   
+** (optional) Write query help
+   Help is included from a markdown file.  For a query =foo.ql= the file =foo.md=
+   is included in the SARIF output when the
+   : --sarif-include-query-help=always
+   flag is set.
+
+   To write such a help file, copy the template in [[./help-template.md]] and
+   customize the content.
