@@ -112,7 +112,7 @@ jobs:
         echo "::set-output name=zip::$CODEQL_ZIP_OUTPUT"
 
     - name: Upload CodeQL database
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.language }}-db
         path: ${{ steps.codeql-database-bundle.outputs.zip }}
