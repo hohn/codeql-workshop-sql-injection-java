@@ -103,7 +103,7 @@ jobs:
       id: codeql-database-bundle
       env:
         LANGUAGE: ${{ matrix.language }}
-        CODEQL_PATH: /opt/hostedtoolcache/CodeQL/2.17.1/x64/codeql/codeql
+        CODEQL_PATH: /opt/hostedtoolcache/CodeQL/2.17.2/x64/codeql/codeql
       run: |
         CODEQL_DATABASE="/home/runner/work/_temp/codeql_databases/$LANGUAGE"
         CODEQL_ZIP_OUTPUT="codeql-database-$LANGUAGE.zip"
