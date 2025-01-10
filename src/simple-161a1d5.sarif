@@ -1,0 +1,466 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeQL",
+          "organization": "GitHub",
+          "semanticVersion": "2.20.0",
+          "notifications": [
+            {
+              "id": "java/baseline/expected-extracted-files",
+              "name": "java/baseline/expected-extracted-files",
+              "shortDescription": {
+                "text": "Expected extracted files"
+              },
+              "fullDescription": {
+                "text": "Files appearing in the source archive that are expected to be extracted."
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              },
+              "properties": {
+                "tags": [
+                  "expected-extracted-files",
+                  "telemetry"
+                ]
+              }
+            },
+            {
+              "id": "cli/build-mode",
+              "name": "cli/build-mode",
+              "shortDescription": {
+                "text": "A build mode was specified"
+              },
+              "fullDescription": {
+                "text": "A build mode was specified"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "cli/sip-enablement",
+              "name": "cli/sip-enablement",
+              "shortDescription": {
+                "text": "macOS SIP enablement status"
+              },
+              "fullDescription": {
+                "text": "macOS SIP enablement status"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "cli/database/interpret-results",
+              "name": "cli/database/interpret-results",
+              "shortDescription": {
+                "text": "CodeQL CLI: database interpret-results"
+              },
+              "fullDescription": {
+                "text": "CodeQL CLI: database interpret-results"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "java/autobuilder/buildless/mode-active",
+              "name": "java/autobuilder/buildless/mode-active",
+              "shortDescription": {
+                "text": "Java was extracted with build-mode set to 'none'"
+              },
+              "fullDescription": {
+                "text": "Java was extracted with build-mode set to 'none'"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "java/autobuilder/buildless/no-build-tool-advice",
+              "name": "java/autobuilder/buildless/no-build-tool-advice",
+              "shortDescription": {
+                "text": "Java analysis found no usable build tool"
+              },
+              "fullDescription": {
+                "text": "Java analysis found no usable build tool"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "java/autobuilder/buildless/jdk-system-default",
+              "name": "java/autobuilder/buildless/jdk-system-default",
+              "shortDescription": {
+                "text": "Java analysis used the system default JDK"
+              },
+              "fullDescription": {
+                "text": "Java analysis used the system default JDK"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            },
+            {
+              "id": "java/autobuilder/buildless/complete",
+              "name": "java/autobuilder/buildless/complete",
+              "shortDescription": {
+                "text": "Java analysis with build-mode 'none' completed"
+              },
+              "fullDescription": {
+                "text": "Java analysis with build-mode 'none' completed"
+              },
+              "defaultConfiguration": {
+                "enabled": true
+              }
+            }
+          ],
+          "rules": [
+            {
+              "id": "cpp/simple",
+              "name": "cpp/simple",
+              "shortDescription": {
+                "text": "simple test"
+              },
+              "fullDescription": {
+                "text": "simple test"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "properties": {
+                "description": "simple test",
+                "id": "cpp/simple",
+                "kind": "problem",
+                "name": "simple test",
+                "problem.severity": "warning"
+              }
+            }
+          ]
+        },
+        "extensions": [
+          {
+            "name": "codeql-workshop/java-sql-injection",
+            "semanticVersion": "0.0.1+161a1d54f8b84d282044f3678694f78265305b21",
+            "locations": [
+              {
+                "uri": "file:///Users/hohn/local/codeql-workshop-sql-injection-java/session/",
+                "description": {
+                  "text": "The QL pack root directory."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackRoot"
+                  ]
+                }
+              },
+              {
+                "uri": "file:///Users/hohn/local/codeql-workshop-sql-injection-java/session/qlpack.yml",
+                "description": {
+                  "text": "The QL pack definition file."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackDefinitionFile"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "codeql/java-all",
+            "semanticVersion": "4.1.0+569b650916c26dc0559c066ad690f594ae70b8db",
+            "locations": [
+              {
+                "uri": "file:///Users/hohn/.codeql/packages/codeql/java-all/4.1.0/",
+                "description": {
+                  "text": "The QL pack root directory."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackRoot"
+                  ]
+                }
+              },
+              {
+                "uri": "file:///Users/hohn/.codeql/packages/codeql/java-all/4.1.0/qlpack.yml",
+                "description": {
+                  "text": "The QL pack definition file."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackDefinitionFile"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "codeql/threat-models",
+            "semanticVersion": "1.0.9+569b650916c26dc0559c066ad690f594ae70b8db",
+            "locations": [
+              {
+                "uri": "file:///Users/hohn/.codeql/packages/codeql/threat-models/1.0.9/",
+                "description": {
+                  "text": "The QL pack root directory."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackRoot"
+                  ]
+                }
+              },
+              {
+                "uri": "file:///Users/hohn/.codeql/packages/codeql/threat-models/1.0.9/qlpack.yml",
+                "description": {
+                  "text": "The QL pack definition file."
+                },
+                "properties": {
+                  "tags": [
+                    "CodeQL/LocalPackDefinitionFile"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "invocations": [
+        {
+          "toolExecutionNotifications": [
+            {
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "AddUser.java",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    }
+                  }
+                }
+              ],
+              "message": {
+                "text": ""
+              },
+              "level": "none",
+              "descriptor": {
+                "id": "java/baseline/expected-extracted-files",
+                "index": 0
+              },
+              "properties": {
+                "formattedMessage": {
+                  "text": ""
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "The none build mode was specified.",
+                "markdown": "The none build mode was specified."
+              },
+              "level": "none",
+              "timeUtc": "2025-01-10T21:12:49.316382Z",
+              "descriptor": {
+                "id": "cli/build-mode",
+                "index": 1
+              },
+              "properties": {
+                "attributes": {
+                  "buildMode": "none"
+                },
+                "visibility": {
+                  "statusPage": false,
+                  "telemetry": true
+                }
+              }
+            },
+            {
+              "message": {
+                "text": ""
+              },
+              "level": "note",
+              "timeUtc": "2025-01-10T21:12:49.334953Z",
+              "descriptor": {
+                "id": "cli/sip-enablement",
+                "index": 2
+              },
+              "properties": {
+                "attributes": {
+                  "isEnabled": true
+                },
+                "visibility": {
+                  "statusPage": false,
+                  "telemetry": true
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "A fatal error occurred: Could not process query metadata for /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-161a1d5/results/codeql-workshop/java-sql-injection/simple.bqrs.\nError was: Cannot process query metadata for a query without the '@kind' metadata property. To learn more, see https://codeql.github.com/docs/writing-codeql-queries/metadata-for-codeql-queries/ [NO_KIND_SPECIFIED]"
+              },
+              "level": "error",
+              "timeUtc": "2025-01-10T21:35:55.616131Z",
+              "descriptor": {
+                "id": "cli/database/interpret-results",
+                "index": 3
+              },
+              "properties": {
+                "attributes": {
+                  "exitCode": 2
+                },
+                "visibility": {
+                  "telemetry": false
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "A fatal error occurred: Could not process query metadata for /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-161a1d5/results/codeql-workshop/java-sql-injection/simple.bqrs.\nError was: Cannot process query metadata for a query without the '@kind' metadata property. To learn more, see https://codeql.github.com/docs/writing-codeql-queries/metadata-for-codeql-queries/ [NO_KIND_SPECIFIED]"
+              },
+              "level": "error",
+              "timeUtc": "2025-01-10T21:37:56.799098Z",
+              "descriptor": {
+                "id": "cli/database/interpret-results",
+                "index": 3
+              },
+              "properties": {
+                "attributes": {
+                  "exitCode": 2
+                },
+                "visibility": {
+                  "telemetry": false
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Java was extracted with build-mode set to 'none'. This means that all Java source in the working directory will be scanned, with build tools such as Maven and Gradle only contributing information about external dependencies.",
+                "markdown": "Java was extracted with build-mode set to 'none'. This means that all Java source in the working directory will be scanned, with build tools such as Maven and Gradle only contributing information about external dependencies."
+              },
+              "level": "note",
+              "timeUtc": "2025-01-10T21:15:46.780504Z",
+              "descriptor": {
+                "id": "java/autobuilder/buildless/mode-active",
+                "index": 4
+              },
+              "properties": {
+                "visibility": {
+                  "statusPage": true,
+                  "telemetry": true
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Because no usable build tool (Gradle, Maven, etc) was found, build scripts could not be queried for guidance about the appropriate JDK version for the code being extracted, or precise dependency information. The default JDK will be used, and external dependencies will be inferred from the Java package names used.",
+                "markdown": "Because no usable build tool (Gradle, Maven, etc) was found, build scripts could not be queried for guidance about the appropriate JDK version for the code being extracted, or precise dependency information. The default JDK will be used, and external dependencies will be inferred from the Java package names used."
+              },
+              "level": "none",
+              "timeUtc": "2025-01-10T21:15:46.823124Z",
+              "descriptor": {
+                "id": "java/autobuilder/buildless/no-build-tool-advice",
+                "index": 5
+              },
+              "properties": {
+                "visibility": {
+                  "statusPage": false,
+                  "telemetry": true
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Java analysis used the system default JDK.",
+                "markdown": "Java analysis used the system default JDK."
+              },
+              "level": "none",
+              "timeUtc": "2025-01-10T21:15:46.826485Z",
+              "descriptor": {
+                "id": "java/autobuilder/buildless/jdk-system-default",
+                "index": 6
+              },
+              "properties": {
+                "visibility": {
+                  "statusPage": false,
+                  "telemetry": true
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "Java analysis with build-mode 'none' completed.",
+                "markdown": "Java analysis with build-mode 'none' completed."
+              },
+              "level": "none",
+              "timeUtc": "2025-01-10T21:15:53.761353Z",
+              "descriptor": {
+                "id": "java/autobuilder/buildless/complete",
+                "index": 7
+              },
+              "properties": {
+                "visibility": {
+                  "statusPage": false,
+                  "telemetry": true
+                }
+              }
+            }
+          ],
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "AddUser.java",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          }
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "cpp/simple",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "cpp/simple",
+            "index": 0
+          },
+          "message": {
+            "text": "Found readline"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "AddUser.java",
+                  "uriBaseId": "%SRCROOT%",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 16,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "35e0e9191319eb2b:1",
+            "primaryLocationStartColumnFingerprint": "7"
+          }
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "properties": {
+        "semmle.formatSpecifier": "sarifv2.1.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1470 @@
+﻿2025-01-07T18:41:40.3303682Z Current runner version: '2.321.0'
+2025-01-07T18:41:40.3329539Z ##[group]Operating System
+2025-01-07T18:41:40.3330370Z Ubuntu
+2025-01-07T18:41:40.3331017Z 22.04.5
+2025-01-07T18:41:40.3331527Z LTS
+2025-01-07T18:41:40.3332062Z ##[endgroup]
+2025-01-07T18:41:40.3332714Z ##[group]Runner Image
+2025-01-07T18:41:40.3333277Z Image: ubuntu-22.04
+2025-01-07T18:41:40.3333824Z Version: 20241215.1.0
+2025-01-07T18:41:40.3335293Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20241215.1/images/ubuntu/Ubuntu2204-Readme.md
+2025-01-07T18:41:40.3336701Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20241215.1
+2025-01-07T18:41:40.3337661Z ##[endgroup]
+2025-01-07T18:41:40.3338289Z ##[group]Runner Image Provisioner
+2025-01-07T18:41:40.3338889Z 2.0.404.1
+2025-01-07T18:41:40.3339428Z ##[endgroup]
+2025-01-07T18:41:40.3340832Z ##[group]GITHUB_TOKEN Permissions
+2025-01-07T18:41:40.3342876Z Actions: read
+2025-01-07T18:41:40.3343511Z Contents: read
+2025-01-07T18:41:40.3344207Z Metadata: read
+2025-01-07T18:41:40.3344862Z Packages: read
+2025-01-07T18:41:40.3345356Z SecurityEvents: write
+2025-01-07T18:41:40.3345885Z ##[endgroup]
+2025-01-07T18:41:40.3349051Z Secret source: Actions
+2025-01-07T18:41:40.3350072Z Prepare workflow directory
+2025-01-07T18:41:40.3822625Z Prepare all required actions
+2025-01-07T18:41:40.3857954Z Getting action download info
+2025-01-07T18:41:40.5975816Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-01-07T18:41:40.6891536Z Download action repository 'github/codeql-action@v3' (SHA:48ab28a6f5dbc2a99bf1e0131198dd8f1df78169)
+2025-01-07T18:41:45.6264412Z Download action repository 'actions/github-script@v7' (SHA:60a0d83039c74a4aee543508d2ffcb1c3799cdea)
+2025-01-07T18:41:45.7908713Z Complete job name: Analyze (java-kotlin)
+2025-01-07T18:41:45.8629801Z ##[group]Run actions/checkout@v4
+2025-01-07T18:41:45.8630451Z with:
+2025-01-07T18:41:45.8630764Z   repository: hohn/codeql-workshop-sql-injection-java
+2025-01-07T18:41:45.8631339Z   token: ***
+2025-01-07T18:41:45.8631571Z   ssh-strict: true
+2025-01-07T18:41:45.8631802Z   ssh-user: git
+2025-01-07T18:41:45.8632048Z   persist-credentials: true
+2025-01-07T18:41:45.8632313Z   clean: true
+2025-01-07T18:41:45.8632569Z   sparse-checkout-cone-mode: true
+2025-01-07T18:41:45.8632862Z   fetch-depth: 1
+2025-01-07T18:41:45.8633095Z   fetch-tags: false
+2025-01-07T18:41:45.8633347Z   show-progress: true
+2025-01-07T18:41:45.8633609Z   lfs: false
+2025-01-07T18:41:45.8633837Z   submodules: false
+2025-01-07T18:41:45.8634087Z   set-safe-directory: true
+2025-01-07T18:41:45.8634559Z env:
+2025-01-07T18:41:45.8634809Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:41:45.8635168Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:41:45.8643621Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:41:45.8652362Z ##[endgroup]
+2025-01-07T18:41:46.0659325Z Syncing repository: hohn/codeql-workshop-sql-injection-java
+2025-01-07T18:41:46.0660788Z ##[group]Getting Git version info
+2025-01-07T18:41:46.0661452Z Working directory is '/home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java'
+2025-01-07T18:41:46.0662377Z [command]/usr/bin/git version
+2025-01-07T18:41:46.0725574Z git version 2.47.1
+2025-01-07T18:41:46.0753678Z ##[endgroup]
+2025-01-07T18:41:46.0766860Z Temporarily overriding HOME='/home/runner/work/_temp/a700f735-4cd5-4577-8107-0f9d250e2fa0' before making global git config changes
+2025-01-07T18:41:46.0767887Z Adding repository directory to the temporary git global config as a safe directory
+2025-01-07T18:41:46.0779781Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java
+2025-01-07T18:41:46.0838611Z Deleting the contents of '/home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java'
+2025-01-07T18:41:46.0842773Z ##[group]Initializing the repository
+2025-01-07T18:41:46.0847757Z [command]/usr/bin/git init /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java
+2025-01-07T18:41:46.0943375Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-01-07T18:41:46.0944737Z hint: is subject to change. To configure the initial branch name to use in all
+2025-01-07T18:41:46.0945420Z hint: of your new repositories, which will suppress this warning, call:
+2025-01-07T18:41:46.0945922Z hint:
+2025-01-07T18:41:46.0946302Z hint: 	git config --global init.defaultBranch <name>
+2025-01-07T18:41:46.0946728Z hint:
+2025-01-07T18:41:46.0947108Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-01-07T18:41:46.0947639Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-01-07T18:41:46.0948228Z hint:
+2025-01-07T18:41:46.0948682Z hint: 	git branch -m <name>
+2025-01-07T18:41:46.0949584Z Initialized empty Git repository in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java/.git/
+2025-01-07T18:41:46.0960635Z [command]/usr/bin/git remote add origin https://github.com/hohn/codeql-workshop-sql-injection-java
+2025-01-07T18:41:46.0996347Z ##[endgroup]
+2025-01-07T18:41:46.0996859Z ##[group]Disabling automatic garbage collection
+2025-01-07T18:41:46.1000971Z [command]/usr/bin/git config --local gc.auto 0
+2025-01-07T18:41:46.1029887Z ##[endgroup]
+2025-01-07T18:41:46.1030371Z ##[group]Setting up auth
+2025-01-07T18:41:46.1036451Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-01-07T18:41:46.1066861Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-01-07T18:41:46.1372129Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-01-07T18:41:46.1402296Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-01-07T18:41:46.1634566Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-01-07T18:41:46.1676635Z ##[endgroup]
+2025-01-07T18:41:46.1677259Z ##[group]Fetching the repository
+2025-01-07T18:41:46.1685668Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +775734132e7e093dc2fb8825595b54b2723e824f:refs/remotes/origin/master
+2025-01-07T18:41:46.6527611Z From https://github.com/hohn/codeql-workshop-sql-injection-java
+2025-01-07T18:41:46.6528632Z  * [new ref]         775734132e7e093dc2fb8825595b54b2723e824f -> origin/master
+2025-01-07T18:41:46.6554231Z ##[endgroup]
+2025-01-07T18:41:46.6555100Z ##[group]Determining the checkout info
+2025-01-07T18:41:46.6557618Z ##[endgroup]
+2025-01-07T18:41:46.6563329Z [command]/usr/bin/git sparse-checkout disable
+2025-01-07T18:41:46.6607407Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-01-07T18:41:46.6636288Z ##[group]Checking out the ref
+2025-01-07T18:41:46.6640942Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-01-07T18:41:46.6852323Z Reset branch 'master'
+2025-01-07T18:41:46.6854656Z branch 'master' set up to track 'origin/master'.
+2025-01-07T18:41:46.6860166Z ##[endgroup]
+2025-01-07T18:41:46.6895423Z [command]/usr/bin/git log -1 --format=%H
+2025-01-07T18:41:46.6918509Z 775734132e7e093dc2fb8825595b54b2723e824f
+2025-01-07T18:41:46.7184038Z ##[group]Run github/codeql-action/init@v3
+2025-01-07T18:41:46.7184398Z with:
+2025-01-07T18:41:46.7184622Z   languages: java-kotlin
+2025-01-07T18:41:46.7184886Z   build-mode: none
+2025-01-07T18:41:46.7185137Z   dependency-caching: true
+2025-01-07T18:41:46.7185511Z   config: default-setup:
+  org:
+    model-packs: [  ]
+threat-models: [  ]
+
+2025-01-07T18:41:46.7186072Z   token: ***
+2025-01-07T18:41:46.7186566Z   matrix: {
+  "language": "java-kotlin",
+  "category": "/language:java-kotlin",
+  "build-mode": "none",
+  "runner": "[\"ubuntu-latest\"]"
+}
+2025-01-07T18:41:46.7187110Z   debug: false
+2025-01-07T18:41:46.7187332Z env:
+2025-01-07T18:41:46.7187564Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:41:46.7187901Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:41:46.7196125Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:41:46.7205347Z ##[endgroup]
+2025-01-07T18:41:47.0173275Z Job run UUID is 1dbfc87a-112b-481b-b257-104c5ce956e4.
+2025-01-07T18:41:47.5090555Z ##[group]Setup CodeQL tools
+2025-01-07T18:41:47.5155131Z [command]/usr/bin/tar --version
+2025-01-07T18:41:47.5185471Z tar (GNU tar) 1.34
+2025-01-07T18:41:47.5186486Z Copyright (C) 2021 Free Software Foundation, Inc.
+2025-01-07T18:41:47.5187411Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2025-01-07T18:41:47.5188376Z This is free software: you are free to change and redistribute it.
+2025-01-07T18:41:47.5189181Z There is NO WARRANTY, to the extent permitted by law.
+2025-01-07T18:41:47.5189679Z 
+2025-01-07T18:41:47.5189914Z Written by John Gilmore and Jay Fenlason.
+2025-01-07T18:41:47.5194756Z Found gnu tar version 1.34.
+2025-01-07T18:41:47.5207462Z Found CodeQL tools version 2.20.0 in the toolcache.
+2025-01-07T18:41:47.5208337Z Using CodeQL CLI version 2.20.0 from toolcache at /opt/hostedtoolcache/CodeQL/2.20.0/x64
+2025-01-07T18:41:51.4834683Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql version --format=json
+2025-01-07T18:41:52.0655422Z {
+2025-01-07T18:41:52.0656893Z   "productName" : "CodeQL",
+2025-01-07T18:41:52.0657515Z   "vendor" : "GitHub",
+2025-01-07T18:41:52.0657876Z   "version" : "2.20.0",
+2025-01-07T18:41:52.0658325Z   "sha" : "e75729b99ac90e0b9b23fc625c420a5589b90d81",
+2025-01-07T18:41:52.0658792Z   "branches" : [
+2025-01-07T18:41:52.0659776Z     "codeql-cli-2.20.0"
+2025-01-07T18:41:52.0660189Z   ],
+2025-01-07T18:41:52.0660540Z   "copyright" : "Copyright (C) 2019-2024 GitHub, Inc.",
+2025-01-07T18:41:52.0661145Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql",
+2025-01-07T18:41:52.0661838Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+2025-01-07T18:41:52.0662393Z   "configFileFound" : false,
+2025-01-07T18:41:52.0662748Z   "features" : {
+2025-01-07T18:41:52.0663095Z     "analysisSummaryV2Default" : true,
+2025-01-07T18:41:52.0663637Z     "buildModeOption" : true,
+2025-01-07T18:41:52.0664059Z     "bundleSupportsIncludeDiagnostics" : true,
+2025-01-07T18:41:52.0664620Z     "bundleSupportsIncludeLogs" : true,
+2025-01-07T18:41:52.0665246Z     "databaseInterpretResultsSupportsSarifRunProperty" : true,
+2025-01-07T18:41:52.0665863Z     "featuresInVersionResult" : true,
+2025-01-07T18:41:52.0666409Z     "indirectTracingSupportsStaticBinaries" : false,
+2025-01-07T18:41:52.0667389Z     "informsAboutUnsupportedPathFilters" : true,
+2025-01-07T18:41:52.0682772Z     "supportsPython312" : true,
+2025-01-07T18:41:52.0683543Z     "mrvaPackCreate" : true,
+2025-01-07T18:41:52.0684156Z     "threatModelOption" : true,
+2025-01-07T18:41:52.0684882Z     "traceCommandUseBuildMode" : true,
+2025-01-07T18:41:52.0685634Z     "v2ramSizing" : true,
+2025-01-07T18:41:52.0686383Z     "mrvaPackCreateMultipleQueries" : true,
+2025-01-07T18:41:52.0687102Z     "setsCodeqlRunnerEnvVar" : true,
+2025-01-07T18:41:52.0687752Z     "sarifMergeRunsFromEqualCategory" : true,
+2025-01-07T18:41:52.0688328Z     "forceOverwrite" : true,
+2025-01-07T18:41:52.0688747Z     "generateSummarySymbolMap" : true,
+2025-01-07T18:41:52.0689260Z     "pythonDefaultIsToNotExtractStdlib" : true
+2025-01-07T18:41:52.0689731Z   }
+2025-01-07T18:41:52.0690023Z }
+2025-01-07T18:41:52.0917165Z ##[endgroup]
+2025-01-07T18:41:52.0917780Z ##[group]Validating workflow
+2025-01-07T18:41:52.0961349Z Detected no issues with the code scanning workflow.
+2025-01-07T18:41:52.0962224Z ##[endgroup]
+2025-01-07T18:41:52.0964333Z ##[group]Load language configuration
+2025-01-07T18:41:52.0973407Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
+2025-01-07T18:41:53.2504673Z {
+2025-01-07T18:41:53.2505529Z   "aliases" : {
+2025-01-07T18:41:53.2505924Z     "c" : "cpp",
+2025-01-07T18:41:53.2506306Z     "c++" : "cpp",
+2025-01-07T18:41:53.2506689Z     "c-c++" : "cpp",
+2025-01-07T18:41:53.2507075Z     "c-cpp" : "cpp",
+2025-01-07T18:41:53.2507480Z     "c#" : "csharp",
+2025-01-07T18:41:53.2507875Z     "java-kotlin" : "java",
+2025-01-07T18:41:53.2508319Z     "kotlin" : "java",
+2025-01-07T18:41:53.2508784Z     "javascript-typescript" : "javascript",
+2025-01-07T18:41:53.2509339Z     "typescript" : "javascript"
+2025-01-07T18:41:53.2509764Z   },
+2025-01-07T18:41:53.2510631Z   "extractors" : {
+2025-01-07T18:41:53.2510962Z     "csv" : [
+2025-01-07T18:41:53.2511224Z       {
+2025-01-07T18:41:53.2511672Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/csv"
+2025-01-07T18:41:53.2512173Z       }
+2025-01-07T18:41:53.2512319Z     ],
+2025-01-07T18:41:53.2512482Z     "yaml" : [
+2025-01-07T18:41:53.2512655Z       {
+2025-01-07T18:41:53.2512917Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/yaml"
+2025-01-07T18:41:53.2513255Z       }
+2025-01-07T18:41:53.2513403Z     ],
+2025-01-07T18:41:53.2513559Z     "html" : [
+2025-01-07T18:41:53.2513730Z       {
+2025-01-07T18:41:53.2513970Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/html"
+2025-01-07T18:41:53.2514288Z       }
+2025-01-07T18:41:53.2514641Z     ],
+2025-01-07T18:41:53.2514959Z     "ruby" : [
+2025-01-07T18:41:53.2515199Z       {
+2025-01-07T18:41:53.2515620Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/ruby",
+2025-01-07T18:41:53.2516168Z         "extractor_options" : {
+2025-01-07T18:41:53.2516508Z           "trap" : {
+2025-01-07T18:41:53.2516864Z             "title" : "Options pertaining to TRAP.",
+2025-01-07T18:41:53.2517718Z             "description" : "Options pertaining to TRAP.",
+2025-01-07T18:41:53.2518207Z             "type" : "object",
+2025-01-07T18:41:53.2518916Z             "properties" : {
+2025-01-07T18:41:53.2519297Z               "compression" : {
+2025-01-07T18:41:53.2519877Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2025-01-07T18:41:53.2521346Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+2025-01-07T18:41:53.2522583Z                 "type" : "string",
+2025-01-07T18:41:53.2522982Z                 "pattern" : "^(none|gzip)$"
+2025-01-07T18:41:53.2523376Z               }
+2025-01-07T18:41:53.2523653Z             }
+2025-01-07T18:41:53.2523938Z           }
+2025-01-07T18:41:53.2524208Z         }
+2025-01-07T18:41:53.2524473Z       }
+2025-01-07T18:41:53.2524722Z     ],
+2025-01-07T18:41:53.2524995Z     "python" : [
+2025-01-07T18:41:53.2525289Z       {
+2025-01-07T18:41:53.2525754Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/python",
+2025-01-07T18:41:53.2526341Z         "extractor_options" : {
+2025-01-07T18:41:53.2526707Z           "logging" : {
+2025-01-07T18:41:53.2527081Z             "title" : "Options pertaining to logging.",
+2025-01-07T18:41:53.2527602Z             "description" : "Options pertaining to logging.",
+2025-01-07T18:41:53.2528071Z             "type" : "object",
+2025-01-07T18:41:53.2528434Z             "properties" : {
+2025-01-07T18:41:53.2528797Z               "verbosity" : {
+2025-01-07T18:41:53.2529239Z                 "title" : "Python extractor logging verbosity level.",
+2025-01-07T18:41:53.2530875Z                 "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2025-01-07T18:41:53.2532464Z                 "type" : "string",
+2025-01-07T18:41:53.2533200Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2025-01-07T18:41:53.2533934Z               }
+2025-01-07T18:41:53.2534224Z             }
+2025-01-07T18:41:53.2534491Z           },
+2025-01-07T18:41:53.2534820Z           "python_executable_name" : {
+2025-01-07T18:41:53.2535545Z             "title" : "Controls the name of the Python executable used by the Python extractor.",
+2025-01-07T18:41:53.2537791Z             "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+2025-01-07T18:41:53.2540248Z             "type" : "string",
+2025-01-07T18:41:53.2540639Z             "pattern" : "^(py|python|python3)$"
+2025-01-07T18:41:53.2541061Z           }
+2025-01-07T18:41:53.2541325Z         }
+2025-01-07T18:41:53.2541575Z       }
+2025-01-07T18:41:53.2541828Z     ],
+2025-01-07T18:41:53.2542089Z     "go" : [
+2025-01-07T18:41:53.2542353Z       {
+2025-01-07T18:41:53.2542772Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/go",
+2025-01-07T18:41:53.2543364Z         "extractor_options" : {
+2025-01-07T18:41:53.2543759Z           "extract_tests" : {
+2025-01-07T18:41:53.2544286Z             "title" : "Whether to include Go test files in the CodeQL database.",
+2025-01-07T18:41:53.2545368Z             "description" : "A value indicating whether Go test files should be included in the CodeQL database. The default is 'false'.\n",
+2025-01-07T18:41:53.2546306Z             "type" : "string",
+2025-01-07T18:41:53.2546690Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2547025Z           },
+2025-01-07T18:41:53.2547437Z           "extract_vendor_dirs" : {
+2025-01-07T18:41:53.2547792Z             "title" : "Whether to include Go vendor directories in the CodeQL database.",
+2025-01-07T18:41:53.2548417Z             "description" : "A value indicating whether Go vendor directories should be included in the CodeQL database. The default is 'false'.\n",
+2025-01-07T18:41:53.2548936Z             "type" : "string",
+2025-01-07T18:41:53.2549154Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2549375Z           }
+2025-01-07T18:41:53.2549530Z         }
+2025-01-07T18:41:53.2549674Z       }
+2025-01-07T18:41:53.2549823Z     ],
+2025-01-07T18:41:53.2549981Z     "java" : [
+2025-01-07T18:41:53.2550134Z       {
+2025-01-07T18:41:53.2550389Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java",
+2025-01-07T18:41:53.2550735Z         "extractor_options" : {
+2025-01-07T18:41:53.2550949Z           "exclude" : {
+2025-01-07T18:41:53.2551188Z             "title" : "A glob excluding files from analysis.",
+2025-01-07T18:41:53.2551580Z             "description" : "A glob indicating what files to exclude from the analysis.\n",
+2025-01-07T18:41:53.2551921Z             "type" : "string"
+2025-01-07T18:41:53.2552123Z           },
+2025-01-07T18:41:53.2552307Z           "add_prefer_source" : {
+2025-01-07T18:41:53.2552604Z             "title" : "Whether to always prefer source files over class files.",
+2025-01-07T18:41:53.2553617Z             "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+2025-01-07T18:41:53.2554533Z             "type" : "string",
+2025-01-07T18:41:53.2554750Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2554985Z           },
+2025-01-07T18:41:53.2555152Z           "buildless" : {
+2025-01-07T18:41:53.2555468Z             "title" : "Whether to use buildless (standalone) extraction (experimental).",
+2025-01-07T18:41:53.2556946Z             "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2025-01-07T18:41:53.2558297Z             "type" : "string",
+2025-01-07T18:41:53.2558753Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2558977Z           }
+2025-01-07T18:41:53.2559136Z         }
+2025-01-07T18:41:53.2559295Z       }
+2025-01-07T18:41:53.2559439Z     ],
+2025-01-07T18:41:53.2559597Z     "csharp" : [
+2025-01-07T18:41:53.2559930Z       {
+2025-01-07T18:41:53.2560190Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/csharp",
+2025-01-07T18:41:53.2560537Z         "extractor_options" : {
+2025-01-07T18:41:53.2560745Z           "trap" : {
+2025-01-07T18:41:53.2560954Z             "title" : "Options pertaining to TRAP.",
+2025-01-07T18:41:53.2561248Z             "description" : "Options pertaining to TRAP.",
+2025-01-07T18:41:53.2561517Z             "type" : "object",
+2025-01-07T18:41:53.2561726Z             "properties" : {
+2025-01-07T18:41:53.2561938Z               "compression" : {
+2025-01-07T18:41:53.2562265Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2025-01-07T18:41:53.2563114Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+2025-01-07T18:41:53.2563848Z                 "type" : "string",
+2025-01-07T18:41:53.2564088Z                 "pattern" : "^(none|gzip|brotli)$"
+2025-01-07T18:41:53.2564332Z               }
+2025-01-07T18:41:53.2564648Z             }
+2025-01-07T18:41:53.2564823Z           },
+2025-01-07T18:41:53.2564983Z           "buildless" : {
+2025-01-07T18:41:53.2565301Z             "title" : "DEPRECATED - Whether to use buildless (standalone) extraction.",
+2025-01-07T18:41:53.2567001Z             "description" : "DEPRECATED: Use `--build-mode none` instead.\nA value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2025-01-07T18:41:53.2568494Z             "type" : "string",
+2025-01-07T18:41:53.2568724Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2568953Z           },
+2025-01-07T18:41:53.2569112Z           "logging" : {
+2025-01-07T18:41:53.2569336Z             "title" : "Options pertaining to logging.",
+2025-01-07T18:41:53.2569642Z             "description" : "Options pertaining to logging.",
+2025-01-07T18:41:53.2569912Z             "type" : "object",
+2025-01-07T18:41:53.2570123Z             "properties" : {
+2025-01-07T18:41:53.2570325Z               "verbosity" : {
+2025-01-07T18:41:53.2570566Z                 "title" : "Extractor logging verbosity level.",
+2025-01-07T18:41:53.2571418Z                 "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2025-01-07T18:41:53.2572231Z                 "type" : "string",
+2025-01-07T18:41:53.2572656Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2025-01-07T18:41:53.2573106Z               }
+2025-01-07T18:41:53.2573284Z             }
+2025-01-07T18:41:53.2573437Z           },
+2025-01-07T18:41:53.2573605Z           "binlog" : {
+2025-01-07T18:41:53.2573803Z             "title" : "Binlog",
+2025-01-07T18:41:53.2574399Z             "description" : "[EXPERIMENTAL] The value is a path to the MsBuild binary log file that should be extracted. This option only works when `--build-mode none` is also specified.\n",
+2025-01-07T18:41:53.2575032Z             "type" : "array"
+2025-01-07T18:41:53.2575231Z           }
+2025-01-07T18:41:53.2575380Z         }
+2025-01-07T18:41:53.2575536Z       }
+2025-01-07T18:41:53.2575685Z     ],
+2025-01-07T18:41:53.2575849Z     "javascript" : [
+2025-01-07T18:41:53.2576029Z       {
+2025-01-07T18:41:53.2576310Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/javascript",
+2025-01-07T18:41:53.2576668Z         "extractor_options" : {
+2025-01-07T18:41:53.2577016Z           "trap" : {
+2025-01-07T18:41:53.2577204Z             "title" : "TRAP options",
+2025-01-07T18:41:53.2577534Z             "description" : "Options about how the extractor handles TRAP files",
+2025-01-07T18:41:53.2577861Z             "type" : "object",
+2025-01-07T18:41:53.2578075Z             "visibility" : 3,
+2025-01-07T18:41:53.2578279Z             "properties" : {
+2025-01-07T18:41:53.2578480Z               "cache" : {
+2025-01-07T18:41:53.2578682Z                 "title" : "TRAP cache options",
+2025-01-07T18:41:53.2579035Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2025-01-07T18:41:53.2579376Z                 "type" : "object",
+2025-01-07T18:41:53.2579593Z                 "properties" : {
+2025-01-07T18:41:53.2579797Z                   "dir" : {
+2025-01-07T18:41:53.2580016Z                     "title" : "TRAP cache directory",
+2025-01-07T18:41:53.2580324Z                     "description" : "The directory of the TRAP cache to use",
+2025-01-07T18:41:53.2580631Z                     "type" : "string"
+2025-01-07T18:41:53.2580851Z                   },
+2025-01-07T18:41:53.2581156Z                   "bound" : {
+2025-01-07T18:41:53.2581383Z                     "title" : "TRAP cache bound",
+2025-01-07T18:41:53.2581712Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2025-01-07T18:41:53.2582055Z                     "type" : "string",
+2025-01-07T18:41:53.2582285Z                     "pattern" : "[0-9]+"
+2025-01-07T18:41:53.2582511Z                   },
+2025-01-07T18:41:53.2582681Z                   "write" : {
+2025-01-07T18:41:53.2582904Z                     "title" : "TRAP cache writeable",
+2025-01-07T18:41:53.2583265Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2025-01-07T18:41:53.2583604Z                     "type" : "string",
+2025-01-07T18:41:53.2583852Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2025-01-07T18:41:53.2584100Z                   }
+2025-01-07T18:41:53.2584280Z                 }
+2025-01-07T18:41:53.2584452Z               }
+2025-01-07T18:41:53.2584608Z             }
+2025-01-07T18:41:53.2584776Z           },
+2025-01-07T18:41:53.2584949Z           "skip_types" : {
+2025-01-07T18:41:53.2585185Z             "title" : "Skip type extraction for TypeScript",
+2025-01-07T18:41:53.2585756Z             "description" : "Whether to skip the extraction of types in a TypeScript application",
+2025-01-07T18:41:53.2586407Z             "type" : "string",
+2025-01-07T18:41:53.2586726Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:53.2587132Z           }
+2025-01-07T18:41:53.2587404Z         }
+2025-01-07T18:41:53.2587656Z       }
+2025-01-07T18:41:53.2587922Z     ],
+2025-01-07T18:41:53.2588186Z     "cpp" : [
+2025-01-07T18:41:53.2588439Z       {
+2025-01-07T18:41:53.2588715Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/cpp",
+2025-01-07T18:41:53.2589057Z         "extractor_options" : {
+2025-01-07T18:41:53.2589282Z           "trap" : {
+2025-01-07T18:41:53.2589478Z             "title" : "TRAP options",
+2025-01-07T18:41:53.2589805Z             "description" : "Options about how the extractor handles TRAP files",
+2025-01-07T18:41:53.2590138Z             "type" : "object",
+2025-01-07T18:41:53.2590354Z             "visibility" : 3,
+2025-01-07T18:41:53.2590570Z             "properties" : {
+2025-01-07T18:41:53.2590776Z               "cache" : {
+2025-01-07T18:41:53.2590991Z                 "title" : "TRAP cache options",
+2025-01-07T18:41:53.2591335Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2025-01-07T18:41:53.2591676Z                 "type" : "object",
+2025-01-07T18:41:53.2591907Z                 "properties" : {
+2025-01-07T18:41:53.2592117Z                   "dir" : {
+2025-01-07T18:41:53.2592341Z                     "title" : "TRAP cache directory",
+2025-01-07T18:41:53.2592659Z                     "description" : "The directory of the TRAP cache to use",
+2025-01-07T18:41:53.2593122Z                     "type" : "string"
+2025-01-07T18:41:53.2593337Z                   },
+2025-01-07T18:41:53.2593516Z                   "bound" : {
+2025-01-07T18:41:53.2593738Z                     "title" : "TRAP cache bound",
+2025-01-07T18:41:53.2594066Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2025-01-07T18:41:53.2594388Z                     "type" : "string",
+2025-01-07T18:41:53.2594619Z                     "pattern" : "[0-9]+"
+2025-01-07T18:41:53.2594842Z                   },
+2025-01-07T18:41:53.2595019Z                   "write" : {
+2025-01-07T18:41:53.2595240Z                     "title" : "TRAP cache writeable",
+2025-01-07T18:41:53.2595595Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2025-01-07T18:41:53.2595940Z                     "type" : "string",
+2025-01-07T18:41:53.2596184Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2025-01-07T18:41:53.2596430Z                   }
+2025-01-07T18:41:53.2596608Z                 }
+2025-01-07T18:41:53.2596776Z               }
+2025-01-07T18:41:53.2596942Z             }
+2025-01-07T18:41:53.2597101Z           },
+2025-01-07T18:41:53.2597382Z           "scale_timeouts" : {
+2025-01-07T18:41:53.2597671Z             "title" : "Value to scale compiler introspection timeouts with",
+2025-01-07T18:41:53.2599240Z             "description" : "The extractor attempts to determine what compiler the source code being extracted is compiled with. To this end the extractor makes additional calls to the compiler, some of which are expected to return within a certain fixed time (either 10s or 15s). On some systems that are under high load this time might be too short, and can be scaled up using this option.\n",
+2025-01-07T18:41:53.2600901Z             "type" : "string",
+2025-01-07T18:41:53.2601269Z             "pattern" : "[0-9]+"
+2025-01-07T18:41:53.2601512Z           },
+2025-01-07T18:41:53.2601689Z           "log_verbosity" : {
+2025-01-07T18:41:53.2601935Z             "title" : "Verbosity of the extractor logging",
+2025-01-07T18:41:53.2602504Z             "description" : "Set the verbosity of the extractor logging to 'quiet' (0), 'normal' (1), 'chatty' (2), or 'noisy' (3). The default is 'normal'.\n",
+2025-01-07T18:41:53.2603011Z             "type" : "string",
+2025-01-07T18:41:53.2603226Z             "pattern" : "[0-3]"
+2025-01-07T18:41:53.2603438Z           }
+2025-01-07T18:41:53.2603591Z         }
+2025-01-07T18:41:53.2603755Z       }
+2025-01-07T18:41:53.2603902Z     ],
+2025-01-07T18:41:53.2604060Z     "properties" : [
+2025-01-07T18:41:53.2604252Z       {
+2025-01-07T18:41:53.2604539Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/properties"
+2025-01-07T18:41:53.2604882Z       }
+2025-01-07T18:41:53.2605032Z     ],
+2025-01-07T18:41:53.2605181Z     "xml" : [
+2025-01-07T18:41:53.2605335Z       {
+2025-01-07T18:41:53.2605581Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/xml"
+2025-01-07T18:41:53.2605891Z       }
+2025-01-07T18:41:53.2606042Z     ],
+2025-01-07T18:41:53.2606213Z     "swift" : [
+2025-01-07T18:41:53.2606382Z       {
+2025-01-07T18:41:53.2606633Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/swift"
+2025-01-07T18:41:53.2606950Z       }
+2025-01-07T18:41:53.2607107Z     ]
+2025-01-07T18:41:53.2607255Z   }
+2025-01-07T18:41:53.2607404Z }
+2025-01-07T18:41:53.2670615Z Languages from configuration: java
+2025-01-07T18:41:53.2680249Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
+2025-01-07T18:41:54.1346432Z {
+2025-01-07T18:41:54.1346797Z   "aliases" : {
+2025-01-07T18:41:54.1347137Z     "c" : "cpp",
+2025-01-07T18:41:54.1347453Z     "c++" : "cpp",
+2025-01-07T18:41:54.1347775Z     "c-c++" : "cpp",
+2025-01-07T18:41:54.1348097Z     "c-cpp" : "cpp",
+2025-01-07T18:41:54.1348415Z     "c#" : "csharp",
+2025-01-07T18:41:54.1348746Z     "java-kotlin" : "java",
+2025-01-07T18:41:54.1349105Z     "kotlin" : "java",
+2025-01-07T18:41:54.1350001Z     "javascript-typescript" : "javascript",
+2025-01-07T18:41:54.1350472Z     "typescript" : "javascript"
+2025-01-07T18:41:54.1350849Z   },
+2025-01-07T18:41:54.1351117Z   "extractors" : {
+2025-01-07T18:41:54.1351423Z     "csv" : [
+2025-01-07T18:41:54.1351699Z       {
+2025-01-07T18:41:54.1352157Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/csv"
+2025-01-07T18:41:54.1352733Z       }
+2025-01-07T18:41:54.1353001Z     ],
+2025-01-07T18:41:54.1353269Z     "yaml" : [
+2025-01-07T18:41:54.1353549Z       {
+2025-01-07T18:41:54.1353995Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/yaml"
+2025-01-07T18:41:54.1354561Z       }
+2025-01-07T18:41:54.1354815Z     ],
+2025-01-07T18:41:54.1355075Z     "html" : [
+2025-01-07T18:41:54.1355347Z       {
+2025-01-07T18:41:54.1355782Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/html"
+2025-01-07T18:41:54.1356350Z       }
+2025-01-07T18:41:54.1356618Z     ],
+2025-01-07T18:41:54.1356898Z     "ruby" : [
+2025-01-07T18:41:54.1357192Z       {
+2025-01-07T18:41:54.1357971Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/ruby",
+2025-01-07T18:41:54.1358829Z         "extractor_options" : {
+2025-01-07T18:41:54.1359195Z           "trap" : {
+2025-01-07T18:41:54.1359554Z             "title" : "Options pertaining to TRAP.",
+2025-01-07T18:41:54.1360054Z             "description" : "Options pertaining to TRAP.",
+2025-01-07T18:41:54.1360511Z             "type" : "object",
+2025-01-07T18:41:54.1360866Z             "properties" : {
+2025-01-07T18:41:54.1361214Z               "compression" : {
+2025-01-07T18:41:54.1361779Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2025-01-07T18:41:54.1363140Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+2025-01-07T18:41:54.1363865Z                 "type" : "string",
+2025-01-07T18:41:54.1364108Z                 "pattern" : "^(none|gzip)$"
+2025-01-07T18:41:54.1364357Z               }
+2025-01-07T18:41:54.1364539Z             }
+2025-01-07T18:41:54.1364725Z           }
+2025-01-07T18:41:54.1365011Z         }
+2025-01-07T18:41:54.1365255Z       }
+2025-01-07T18:41:54.1365514Z     ],
+2025-01-07T18:41:54.1365786Z     "python" : [
+2025-01-07T18:41:54.1366091Z       {
+2025-01-07T18:41:54.1366566Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/python",
+2025-01-07T18:41:54.1367175Z         "extractor_options" : {
+2025-01-07T18:41:54.1367551Z           "logging" : {
+2025-01-07T18:41:54.1367907Z             "title" : "Options pertaining to logging.",
+2025-01-07T18:41:54.1368434Z             "description" : "Options pertaining to logging.",
+2025-01-07T18:41:54.1368955Z             "type" : "object",
+2025-01-07T18:41:54.1369347Z             "properties" : {
+2025-01-07T18:41:54.1369693Z               "verbosity" : {
+2025-01-07T18:41:54.1370142Z                 "title" : "Python extractor logging verbosity level.",
+2025-01-07T18:41:54.1371762Z                 "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2025-01-07T18:41:54.1373346Z                 "type" : "string",
+2025-01-07T18:41:54.1374128Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2025-01-07T18:41:54.1374939Z               }
+2025-01-07T18:41:54.1375248Z             }
+2025-01-07T18:41:54.1375526Z           },
+2025-01-07T18:41:54.1375840Z           "python_executable_name" : {
+2025-01-07T18:41:54.1376497Z             "title" : "Controls the name of the Python executable used by the Python extractor.",
+2025-01-07T18:41:54.1378860Z             "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+2025-01-07T18:41:54.1385069Z             "type" : "string",
+2025-01-07T18:41:54.1385494Z             "pattern" : "^(py|python|python3)$"
+2025-01-07T18:41:54.1385936Z           }
+2025-01-07T18:41:54.1386211Z         }
+2025-01-07T18:41:54.1386478Z       }
+2025-01-07T18:41:54.1386739Z     ],
+2025-01-07T18:41:54.1387000Z     "go" : [
+2025-01-07T18:41:54.1387282Z       {
+2025-01-07T18:41:54.1387737Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/go",
+2025-01-07T18:41:54.1388333Z         "extractor_options" : {
+2025-01-07T18:41:54.1388726Z           "extract_tests" : {
+2025-01-07T18:41:54.1389255Z             "title" : "Whether to include Go test files in the CodeQL database.",
+2025-01-07T18:41:54.1390953Z             "description" : "A value indicating whether Go test files should be included in the CodeQL database. The default is 'false'.\n",
+2025-01-07T18:41:54.1391857Z             "type" : "string",
+2025-01-07T18:41:54.1392256Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1392657Z           },
+2025-01-07T18:41:54.1392975Z           "extract_vendor_dirs" : {
+2025-01-07T18:41:54.1393592Z             "title" : "Whether to include Go vendor directories in the CodeQL database.",
+2025-01-07T18:41:54.1394286Z             "description" : "A value indicating whether Go vendor directories should be included in the CodeQL database. The default is 'false'.\n",
+2025-01-07T18:41:54.1394818Z             "type" : "string",
+2025-01-07T18:41:54.1395051Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1395277Z           }
+2025-01-07T18:41:54.1395434Z         }
+2025-01-07T18:41:54.1395586Z       }
+2025-01-07T18:41:54.1395732Z     ],
+2025-01-07T18:41:54.1395905Z     "java" : [
+2025-01-07T18:41:54.1396065Z       {
+2025-01-07T18:41:54.1396338Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java",
+2025-01-07T18:41:54.1396677Z         "extractor_options" : {
+2025-01-07T18:41:54.1396891Z           "exclude" : {
+2025-01-07T18:41:54.1397127Z             "title" : "A glob excluding files from analysis.",
+2025-01-07T18:41:54.1397629Z             "description" : "A glob indicating what files to exclude from the analysis.\n",
+2025-01-07T18:41:54.1397996Z             "type" : "string"
+2025-01-07T18:41:54.1398195Z           },
+2025-01-07T18:41:54.1398610Z           "add_prefer_source" : {
+2025-01-07T18:41:54.1398984Z             "title" : "Whether to always prefer source files over class files.",
+2025-01-07T18:41:54.1400009Z             "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+2025-01-07T18:41:54.1400930Z             "type" : "string",
+2025-01-07T18:41:54.1401157Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1401388Z           },
+2025-01-07T18:41:54.1401558Z           "buildless" : {
+2025-01-07T18:41:54.1401878Z             "title" : "Whether to use buildless (standalone) extraction (experimental).",
+2025-01-07T18:41:54.1403368Z             "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2025-01-07T18:41:54.1404731Z             "type" : "string",
+2025-01-07T18:41:54.1404948Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1405388Z           }
+2025-01-07T18:41:54.1405544Z         }
+2025-01-07T18:41:54.1405693Z       }
+2025-01-07T18:41:54.1405846Z     ],
+2025-01-07T18:41:54.1406006Z     "csharp" : [
+2025-01-07T18:41:54.1406179Z       {
+2025-01-07T18:41:54.1406451Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/csharp",
+2025-01-07T18:41:54.1406798Z         "extractor_options" : {
+2025-01-07T18:41:54.1407003Z           "trap" : {
+2025-01-07T18:41:54.1407218Z             "title" : "Options pertaining to TRAP.",
+2025-01-07T18:41:54.1407519Z             "description" : "Options pertaining to TRAP.",
+2025-01-07T18:41:54.1407783Z             "type" : "object",
+2025-01-07T18:41:54.1407996Z             "properties" : {
+2025-01-07T18:41:54.1408215Z               "compression" : {
+2025-01-07T18:41:54.1408550Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2025-01-07T18:41:54.1409547Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+2025-01-07T18:41:54.1410282Z                 "type" : "string",
+2025-01-07T18:41:54.1410521Z                 "pattern" : "^(none|gzip|brotli)$"
+2025-01-07T18:41:54.1410765Z               }
+2025-01-07T18:41:54.1410939Z             }
+2025-01-07T18:41:54.1411100Z           },
+2025-01-07T18:41:54.1411269Z           "buildless" : {
+2025-01-07T18:41:54.1411587Z             "title" : "DEPRECATED - Whether to use buildless (standalone) extraction.",
+2025-01-07T18:41:54.1413205Z             "description" : "DEPRECATED: Use `--build-mode none` instead.\nA value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2025-01-07T18:41:54.1414716Z             "type" : "string",
+2025-01-07T18:41:54.1414938Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1415172Z           },
+2025-01-07T18:41:54.1415336Z           "logging" : {
+2025-01-07T18:41:54.1415559Z             "title" : "Options pertaining to logging.",
+2025-01-07T18:41:54.1415864Z             "description" : "Options pertaining to logging.",
+2025-01-07T18:41:54.1416133Z             "type" : "object",
+2025-01-07T18:41:54.1416345Z             "properties" : {
+2025-01-07T18:41:54.1416562Z               "verbosity" : {
+2025-01-07T18:41:54.1416806Z                 "title" : "Extractor logging verbosity level.",
+2025-01-07T18:41:54.1417663Z                 "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+2025-01-07T18:41:54.1418485Z                 "type" : "string",
+2025-01-07T18:41:54.1418928Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+2025-01-07T18:41:54.1419368Z               }
+2025-01-07T18:41:54.1419535Z             }
+2025-01-07T18:41:54.1419697Z           },
+2025-01-07T18:41:54.1419851Z           "binlog" : {
+2025-01-07T18:41:54.1420042Z             "title" : "Binlog",
+2025-01-07T18:41:54.1420648Z             "description" : "[EXPERIMENTAL] The value is a path to the MsBuild binary log file that should be extracted. This option only works when `--build-mode none` is also specified.\n",
+2025-01-07T18:41:54.1421265Z             "type" : "array"
+2025-01-07T18:41:54.1421466Z           }
+2025-01-07T18:41:54.1421625Z         }
+2025-01-07T18:41:54.1421774Z       }
+2025-01-07T18:41:54.1421926Z     ],
+2025-01-07T18:41:54.1422086Z     "javascript" : [
+2025-01-07T18:41:54.1422386Z       {
+2025-01-07T18:41:54.1422667Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/javascript",
+2025-01-07T18:41:54.1423036Z         "extractor_options" : {
+2025-01-07T18:41:54.1423243Z           "trap" : {
+2025-01-07T18:41:54.1423436Z             "title" : "TRAP options",
+2025-01-07T18:41:54.1423756Z             "description" : "Options about how the extractor handles TRAP files",
+2025-01-07T18:41:54.1424091Z             "type" : "object",
+2025-01-07T18:41:54.1424308Z             "visibility" : 3,
+2025-01-07T18:41:54.1424511Z             "properties" : {
+2025-01-07T18:41:54.1424724Z               "cache" : {
+2025-01-07T18:41:54.1424977Z                 "title" : "TRAP cache options",
+2025-01-07T18:41:54.1425341Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2025-01-07T18:41:54.1425694Z                 "type" : "object",
+2025-01-07T18:41:54.1425914Z                 "properties" : {
+2025-01-07T18:41:54.1426137Z                   "dir" : {
+2025-01-07T18:41:54.1426371Z                     "title" : "TRAP cache directory",
+2025-01-07T18:41:54.1426803Z                     "description" : "The directory of the TRAP cache to use",
+2025-01-07T18:41:54.1427117Z                     "type" : "string"
+2025-01-07T18:41:54.1427340Z                   },
+2025-01-07T18:41:54.1427519Z                   "bound" : {
+2025-01-07T18:41:54.1427747Z                     "title" : "TRAP cache bound",
+2025-01-07T18:41:54.1428085Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2025-01-07T18:41:54.1428409Z                     "type" : "string",
+2025-01-07T18:41:54.1428643Z                     "pattern" : "[0-9]+"
+2025-01-07T18:41:54.1428877Z                   },
+2025-01-07T18:41:54.1429052Z                   "write" : {
+2025-01-07T18:41:54.1429273Z                     "title" : "TRAP cache writeable",
+2025-01-07T18:41:54.1429641Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2025-01-07T18:41:54.1429985Z                     "type" : "string",
+2025-01-07T18:41:54.1430234Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2025-01-07T18:41:54.1430484Z                   }
+2025-01-07T18:41:54.1430652Z                 }
+2025-01-07T18:41:54.1430820Z               }
+2025-01-07T18:41:54.1430979Z             }
+2025-01-07T18:41:54.1431148Z           },
+2025-01-07T18:41:54.1431326Z           "skip_types" : {
+2025-01-07T18:41:54.1431568Z             "title" : "Skip type extraction for TypeScript",
+2025-01-07T18:41:54.1431987Z             "description" : "Whether to skip the extraction of types in a TypeScript application",
+2025-01-07T18:41:54.1432373Z             "type" : "string",
+2025-01-07T18:41:54.1432589Z             "pattern" : "^(false|true)$"
+2025-01-07T18:41:54.1432821Z           }
+2025-01-07T18:41:54.1432979Z         }
+2025-01-07T18:41:54.1433124Z       }
+2025-01-07T18:41:54.1433274Z     ],
+2025-01-07T18:41:54.1433430Z     "cpp" : [
+2025-01-07T18:41:54.1433626Z       {
+2025-01-07T18:41:54.1434063Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/cpp",
+2025-01-07T18:41:54.1434630Z         "extractor_options" : {
+2025-01-07T18:41:54.1434937Z           "trap" : {
+2025-01-07T18:41:54.1435282Z             "title" : "TRAP options",
+2025-01-07T18:41:54.1435844Z             "description" : "Options about how the extractor handles TRAP files",
+2025-01-07T18:41:54.1436411Z             "type" : "object",
+2025-01-07T18:41:54.1436682Z             "visibility" : 3,
+2025-01-07T18:41:54.1436896Z             "properties" : {
+2025-01-07T18:41:54.1437095Z               "cache" : {
+2025-01-07T18:41:54.1437308Z                 "title" : "TRAP cache options",
+2025-01-07T18:41:54.1437658Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2025-01-07T18:41:54.1437999Z                 "type" : "object",
+2025-01-07T18:41:54.1438239Z                 "properties" : {
+2025-01-07T18:41:54.1438785Z                   "dir" : {
+2025-01-07T18:41:54.1439234Z                     "title" : "TRAP cache directory",
+2025-01-07T18:41:54.1439574Z                     "description" : "The directory of the TRAP cache to use",
+2025-01-07T18:41:54.1439875Z                     "type" : "string"
+2025-01-07T18:41:54.1440085Z                   },
+2025-01-07T18:41:54.1440272Z                   "bound" : {
+2025-01-07T18:41:54.1440497Z                     "title" : "TRAP cache bound",
+2025-01-07T18:41:54.1440822Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2025-01-07T18:41:54.1441152Z                     "type" : "string",
+2025-01-07T18:41:54.1441388Z                     "pattern" : "[0-9]+"
+2025-01-07T18:41:54.1441607Z                   },
+2025-01-07T18:41:54.1441788Z                   "write" : {
+2025-01-07T18:41:54.1442007Z                     "title" : "TRAP cache writeable",
+2025-01-07T18:41:54.1442356Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2025-01-07T18:41:54.1442702Z                     "type" : "string",
+2025-01-07T18:41:54.1442943Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2025-01-07T18:41:54.1443332Z                   }
+2025-01-07T18:41:54.1443518Z                 }
+2025-01-07T18:41:54.1443695Z               }
+2025-01-07T18:41:54.1443855Z             }
+2025-01-07T18:41:54.1444019Z           },
+2025-01-07T18:41:54.1444181Z           "scale_timeouts" : {
+2025-01-07T18:41:54.1444468Z             "title" : "Value to scale compiler introspection timeouts with",
+2025-01-07T18:41:54.1445759Z             "description" : "The extractor attempts to determine what compiler the source code being extracted is compiled with. To this end the extractor makes additional calls to the compiler, some of which are expected to return within a certain fixed time (either 10s or 15s). On some systems that are under high load this time might be too short, and can be scaled up using this option.\n",
+2025-01-07T18:41:54.1446951Z             "type" : "string",
+2025-01-07T18:41:54.1447162Z             "pattern" : "[0-9]+"
+2025-01-07T18:41:54.1447379Z           },
+2025-01-07T18:41:54.1447547Z           "log_verbosity" : {
+2025-01-07T18:41:54.1447788Z             "title" : "Verbosity of the extractor logging",
+2025-01-07T18:41:54.1448937Z             "description" : "Set the verbosity of the extractor logging to 'quiet' (0), 'normal' (1), 'chatty' (2), or 'noisy' (3). The default is 'normal'.\n",
+2025-01-07T18:41:54.1449624Z             "type" : "string",
+2025-01-07T18:41:54.1449833Z             "pattern" : "[0-3]"
+2025-01-07T18:41:54.1450046Z           }
+2025-01-07T18:41:54.1450210Z         }
+2025-01-07T18:41:54.1450357Z       }
+2025-01-07T18:41:54.1450517Z     ],
+2025-01-07T18:41:54.1450743Z     "properties" : [
+2025-01-07T18:41:54.1450941Z       {
+2025-01-07T18:41:54.1451231Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/properties"
+2025-01-07T18:41:54.1451590Z       }
+2025-01-07T18:41:54.1451733Z     ],
+2025-01-07T18:41:54.1451898Z     "xml" : [
+2025-01-07T18:41:54.1452063Z       {
+2025-01-07T18:41:54.1452309Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/xml"
+2025-01-07T18:41:54.1452640Z       }
+2025-01-07T18:41:54.1452788Z     ],
+2025-01-07T18:41:54.1452945Z     "swift" : [
+2025-01-07T18:41:54.1453117Z       {
+2025-01-07T18:41:54.1453365Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/swift"
+2025-01-07T18:41:54.1453696Z       }
+2025-01-07T18:41:54.1453856Z     ]
+2025-01-07T18:41:54.1454002Z   }
+2025-01-07T18:41:54.1454157Z }
+2025-01-07T18:41:54.1517856Z java does not support TRAP caching (missing option group)
+2025-01-07T18:41:54.1518908Z Found 0 languages that support TRAP caching
+2025-01-07T18:41:54.1523694Z ##[endgroup]
+2025-01-07T18:41:54.1539542Z While resolving threads, found a cgroup CPUs file with 4 CPUs in /sys/fs/cgroup/cpuset.cpus.effective.
+2025-01-07T18:41:54.1759457Z Skipping download of dependency cache for java as we cannot calculate a hash for the cache key.
+2025-01-07T18:41:54.1774301Z Writing augmented user configuration file to /home/runner/work/_temp/user-config.yaml
+2025-01-07T18:41:54.1774975Z ##[group]Augmented user configuration file contents
+2025-01-07T18:41:54.1787361Z default-setup:
+2025-01-07T18:41:54.1787612Z   org:
+2025-01-07T18:41:54.1787799Z     model-packs: []
+2025-01-07T18:41:54.1788011Z threat-models: []
+2025-01-07T18:41:54.1788132Z 
+2025-01-07T18:41:54.1788406Z ##[endgroup]
+2025-01-07T18:41:54.1792086Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database init --force-overwrite --db-cluster /home/runner/work/_temp/codeql_databases --source-root=/home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java --extractor-include-aliases --language=java --codescanning-config=/home/runner/work/_temp/user-config.yaml --build-mode=none --calculate-language-specific-baseline --sublanguage-file-coverage
+2025-01-07T18:41:55.6550795Z Package install location: /home/runner/.codeql/packages
+2025-01-07T18:41:55.6551401Z Nothing downloaded.
+2025-01-07T18:42:00.0831348Z Calculating baseline information in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java
+2025-01-07T18:42:00.7780526Z Calculated baseline information for languages: java (692ms).
+2025-01-07T18:42:04.1383739Z Resolving extractor java.
+2025-01-07T18:42:04.1427641Z Successfully loaded extractor Java/Kotlin (java) from /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java.
+2025-01-07T18:42:04.2816628Z Created skeleton CodeQL database at /home/runner/work/_temp/codeql_databases/java. This in-progress database is ready to be populated by an extractor.
+2025-01-07T18:42:04.4328010Z ##[group]Run github/codeql-action/start-proxy@v3
+2025-01-07T18:42:04.4328341Z with:
+2025-01-07T18:42:04.4328515Z   registry_secrets: []
+2025-01-07T18:42:04.4328839Z   token: ***
+2025-01-07T18:42:04.4329016Z env:
+2025-01-07T18:42:04.4329187Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:42:04.4329466Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:42:04.4337634Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:42:04.4345892Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-01-07T18:42:04.4346159Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-01-07T18:42:04.4346423Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-01-07T18:42:04.4346691Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-01-07T18:42:04.4347169Z   CODEQL_ACTION_VERSION: 3.28.0
+2025-01-07T18:42:04.4347428Z   JOB_RUN_UUID: 1dbfc87a-112b-481b-b257-104c5ce956e4
+2025-01-07T18:42:04.4347700Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-01-07T18:42:04.4348026Z   CODEQL_ACTION_ANALYSIS_KEY: dynamic/github-code-scanning/codeql:analyze
+2025-01-07T18:42:04.4348402Z   CODEQL_WORKFLOW_STARTED_AT: 2025-01-07T18:41:47.008Z
+2025-01-07T18:42:04.4348719Z   CODEQL_RAM: 14567
+2025-01-07T18:42:04.4348906Z   CODEQL_THREADS: 4
+2025-01-07T18:42:04.4349091Z ##[endgroup]
+2025-01-07T18:42:04.5974368Z Using registry_secrets input.
+2025-01-07T18:42:04.5976129Z Credentials loaded for the following registries:
+2025-01-07T18:42:04.5976558Z  
+2025-01-07T18:42:05.1075978Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/46c734b5-7586-46c5-ad3c-a3bebaab6d59 -f /home/runner/work/_temp/2f39b55e-56fe-4050-a148-9493f7da4742
+2025-01-07T18:42:06.2497857Z Proxy started on 127.0.0.1:49152
+2025-01-07T18:42:06.2651960Z ##[group]Run github/codeql-action/autobuild@v3
+2025-01-07T18:42:06.2652269Z with:
+2025-01-07T18:42:06.2652549Z   token: ***
+2025-01-07T18:42:06.2652984Z   matrix: {
+  "language": "java-kotlin",
+  "category": "/language:java-kotlin",
+  "build-mode": "none",
+  "runner": "[\"ubuntu-latest\"]"
+}
+2025-01-07T18:42:06.2653468Z env:
+2025-01-07T18:42:06.2653644Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:42:06.2653914Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:42:06.2662027Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:42:06.2670356Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-01-07T18:42:06.2670639Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-01-07T18:42:06.2670900Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-01-07T18:42:06.2671157Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-01-07T18:42:06.2671412Z   CODEQL_ACTION_VERSION: 3.28.0
+2025-01-07T18:42:06.2671674Z   JOB_RUN_UUID: 1dbfc87a-112b-481b-b257-104c5ce956e4
+2025-01-07T18:42:06.2671949Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-01-07T18:42:06.2672282Z   CODEQL_ACTION_ANALYSIS_KEY: dynamic/github-code-scanning/codeql:analyze
+2025-01-07T18:42:06.2672661Z   CODEQL_WORKFLOW_STARTED_AT: 2025-01-07T18:41:47.008Z
+2025-01-07T18:42:06.2672926Z   CODEQL_RAM: 14567
+2025-01-07T18:42:06.2673116Z   CODEQL_THREADS: 4
+2025-01-07T18:42:06.2673500Z ##[endgroup]
+2025-01-07T18:42:07.2884461Z Using none build mode, nothing to autobuild.
+2025-01-07T18:42:07.4286225Z ##[group]Run github/codeql-action/analyze@v3
+2025-01-07T18:42:07.4286531Z with:
+2025-01-07T18:42:07.4286734Z   category: /language:java-kotlin
+2025-01-07T18:42:07.4286966Z   output: ../results
+2025-01-07T18:42:07.4287161Z   upload: always
+2025-01-07T18:42:07.4287356Z   cleanup-level: brutal
+2025-01-07T18:42:07.4287559Z   add-snippets: false
+2025-01-07T18:42:07.4287754Z   skip-queries: false
+2025-01-07T18:42:07.4288185Z   checkout_path: /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java
+2025-01-07T18:42:07.4288652Z   upload-database: true
+2025-01-07T18:42:07.4288883Z   wait-for-processing: true
+2025-01-07T18:42:07.4289238Z   token: ***
+2025-01-07T18:42:07.4289682Z   matrix: {
+  "language": "java-kotlin",
+  "category": "/language:java-kotlin",
+  "build-mode": "none",
+  "runner": "[\"ubuntu-latest\"]"
+}
+2025-01-07T18:42:07.4290187Z   expect-error: false
+2025-01-07T18:42:07.4290380Z env:
+2025-01-07T18:42:07.4290586Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:42:07.4290876Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:42:07.4298961Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:42:07.4307194Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-01-07T18:42:07.4307476Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-01-07T18:42:07.4307745Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-01-07T18:42:07.4307999Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-01-07T18:42:07.4308251Z   CODEQL_ACTION_VERSION: 3.28.0
+2025-01-07T18:42:07.4308506Z   JOB_RUN_UUID: 1dbfc87a-112b-481b-b257-104c5ce956e4
+2025-01-07T18:42:07.4308784Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-01-07T18:42:07.4309111Z   CODEQL_ACTION_ANALYSIS_KEY: dynamic/github-code-scanning/codeql:analyze
+2025-01-07T18:42:07.4309489Z   CODEQL_WORKFLOW_STARTED_AT: 2025-01-07T18:41:47.008Z
+2025-01-07T18:42:07.4309763Z   CODEQL_RAM: 14567
+2025-01-07T18:42:07.4309948Z   CODEQL_THREADS: 4
+2025-01-07T18:42:07.4310190Z   CODEQL_ACTION_AUTOBUILD_DID_COMPLETE_SUCCESSFULLY: true
+2025-01-07T18:42:07.4310481Z   CODEQL_PROXY_HOST: 127.0.0.1
+2025-01-07T18:42:07.4310698Z   CODEQL_PROXY_PORT: 49152
+2025-01-07T18:42:07.4316436Z   CODEQL_PROXY_CA_CERTIFICATE: -----BEGIN CERTIFICATE-----
+MIIDmTCCAoGgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhjEfMB0GA1UEAxMWRGVw
+ZW5kYWJvdCBJbnRlcm5hbCBDQTEUMBIGA1UEChMLR2l0SHViIGluYy4xEzARBgNV
+BAsTCkRlcGVuZGFib3QxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlh
+MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMB4XDTI1MDEwNzE4NDIwNFoXDTI3MDEw
+NzE4NDIwNFowgYYxHzAdBgNVBAMTFkRlcGVuZGFib3QgSW50ZXJuYWwgQ0ExFDAS
+BgNVBAoTC0dpdEh1YiBpbmMuMRMwEQYDVQQLEwpEZXBlbmRhYm90MQswCQYDVQQG
+EwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNj
+bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL6jLrCYLsTDctkE8EFt
+Fc7xjw6Dm6NBBZI5C4E7qLE14M3qmSn1dDRqBdQfWRRcfbcrMNEnDVNC7d6/7gAK
+D3cG6Vp7NF9mFSH0f2TWlWoaaSdpKsELLcvWXucY7rWhGX0enIcx0f/AgHfGhc1R
+OjLYCO+ccww4OQUKpaimhr9D4/rIqfU50yBJjcG/M8aQI8uJzfgeEB1zi7LHxcFf
+puNuI8PZoO9us+sjnK75V0EmXHfG5uj+dXnrk2vNitOoMCSQjML6azvNK4IhofZz
+NC3TWPATK3toRVYFmNMSR4oUkCgDKeVXlVyCstWQI1+gD4g5C4Zj7zliFqarSk0R
+gjkCAwEAAaMQMA4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAI4L8
+pdWPgMxhqdeC8o79OXWNIaYHjpWGfAkfLtwNm9P1eTz5pUNkRpEQj3V5XeeZHniu
+8xaUl7jDOK36x/y46gEeq5go4p0pO5E8DJ+qH9QxhZ8qiDVglLnKL4wWTVfuhAiW
+H8Yn4ykmzV4/kEHgebVJ5ZjKT6Oyv6BdEgdXNJp0ycNhG0yJTiZnHXtx8l029erf
+oaIXN01aPa9nFm6rvUE2fZRwnN5SBtqFQwcH3MWPljb0mddIQozfI1LkHFDQWc8j
+PkDu+AIhYBzoLUUMqGjTBlneatdTS5QekHS62Os1Ze9bq+4nhsC8n7ihe8MLd4+c
+SYDfR0yPfwFmt2e9rg==
+-----END CERTIFICATE-----
+
+2025-01-07T18:42:07.4325048Z ##[endgroup]
+2025-01-07T18:42:08.4847216Z While resolving threads, found a cgroup CPUs file with 4 CPUs in /sys/fs/cgroup/cpuset.cpus.effective.
+2025-01-07T18:42:08.5024683Z ##[group]Extracting java
+2025-01-07T18:42:08.5027965Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database trace-command --use-build-mode --working-dir /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java /home/runner/work/_temp/codeql_databases/java
+2025-01-07T18:42:09.2710506Z Running command in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java: [/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java/tools/autobuild.sh]
+2025-01-07T18:42:10.6177903Z [2025-01-07 18:42:10] [build-stdout] [2025-01-07 18:42:10] Extracting Java with build-mode=none.
+2025-01-07T18:42:10.9497494Z [2025-01-07 18:42:10] [build-stdout] [2025-01-07 18:42:10] No usable build tool found. Neither JDK version recommendation nor precise dependency recommendations will be available.
+2025-01-07T18:42:11.0476003Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] Found no Java toolchains in a toolchains file, inspecting environment variables...
+2025-01-07T18:42:11.0596955Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] Discovered Java toolchain for version 11.0.0 at /usr/lib/jvm/temurin-11-jdk-amd64 in JAVA_HOME_11_X64
+2025-01-07T18:42:11.0599099Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] Discovered Java toolchain for version 8.0.0 at /usr/lib/jvm/temurin-8-jdk-amd64 in JAVA_HOME_8_X64
+2025-01-07T18:42:11.0600884Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] Discovered Java toolchain for version 17.0.0 at /usr/lib/jvm/temurin-17-jdk-amd64 in JAVA_HOME_17_X64
+2025-01-07T18:42:11.0610201Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] Discovered Java toolchain for version 21.0.0 at /usr/lib/jvm/temurin-21-jdk-amd64 in JAVA_HOME_21_X64
+2025-01-07T18:42:11.1862611Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] No specific JDK inferred from the project being analysed; using the java on the PATH
+2025-01-07T18:42:11.9212626Z [2025-01-07 18:42:11] [build-stdout] [2025-01-07 18:42:11] [autobuild] Scanning for files in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java...
+2025-01-07T18:42:12.0107617Z [2025-01-07 18:42:12] [build-stdout] [2025-01-07 18:42:12] [autobuild] /home/runner/work/_temp/codeql_databases/java: Indexing files in in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java...
+2025-01-07T18:42:12.0428322Z [2025-01-07 18:42:12] [build-stdout] [2025-01-07 18:42:12] [autobuild] Running command in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java: [/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java/tools/index-files.sh, /home/runner/work/_temp/codeql_databases/java/working/files-to-index14101917369983646684.list]
+2025-01-07T18:42:26.2396485Z ##[endgroup]
+2025-01-07T18:42:26.2404956Z ##[group]Finalizing java
+2025-01-07T18:42:26.2406310Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database finalize --finalize-dataset --threads=4 --ram=14567 /home/runner/work/_temp/codeql_databases/java
+2025-01-07T18:42:26.9788088Z Running pre-finalize script /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java/tools/pre-finalize.sh in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java.
+2025-01-07T18:42:27.0594003Z Running command in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java: [/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/java/tools/pre-finalize.sh]
+2025-01-07T18:42:28.4538654Z [2025-01-07 18:42:28] [build-stderr] Scanning for files in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java...
+2025-01-07T18:42:29.2894782Z [2025-01-07 18:42:29] [build-stderr] Scanning for files in /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java...
+2025-01-07T18:42:29.4000077Z Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/java...
+2025-01-07T18:42:31.1648128Z Importing TRAP files
+2025-01-07T18:42:32.3815093Z Merging relations
+2025-01-07T18:42:32.7494464Z Finished writing database (relations: 977.26 KiB; string pool: 2.41 MiB).
+2025-01-07T18:42:32.7723205Z TRAP import complete (3.4s).
+2025-01-07T18:42:33.0946629Z Finished zipping source archive (819.00 B).
+2025-01-07T18:42:33.1178127Z ##[endgroup]
+2025-01-07T18:42:33.1183177Z ##[group]Running queries for java
+2025-01-07T18:42:33.1185676Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database run-queries --ram=14567 --threads=4 /home/runner/work/_temp/codeql_databases/java --expect-discarded-cache --min-disk-free=1024 -v --intra-layer-parallelism
+2025-01-07T18:42:33.8211188Z Writing logs to /home/runner/work/_temp/codeql_databases/java/log/database-run-queries-20250107.184233.817.log.
+2025-01-07T18:42:33.8902810Z Stringpool size measured as 2523546
+2025-01-07T18:42:34.4944062Z Writing logs to /home/runner/work/_temp/codeql_databases/java/log/execute-queries-20250107.184234.490.log.
+2025-01-07T18:42:34.8365446Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10.
+2025-01-07T18:42:38.3831367Z Compiling in 3 threads due to RAM limits.
+2025-01-07T18:42:38.9373047Z [1/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Likely Bugs/Arithmetic/InformationLoss.qlx.
+2025-01-07T18:42:40.2857534Z [2/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-113/NettyResponseSplitting.qlx.
+2025-01-07T18:42:40.3879456Z [3/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-113/ResponseSplitting.qlx.
+2025-01-07T18:42:40.4037841Z [4/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-330/InsecureRandomness.qlx.
+2025-01-07T18:42:40.6772416Z [5/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-940/AndroidIntentRedirection.qlx.
+2025-01-07T18:42:40.6920524Z [6/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-925/ImproperIntentVerification.qlx.
+2025-01-07T18:42:40.8299360Z [7/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-312/CleartextStorageCookie.qlx.
+2025-01-07T18:42:40.8784038Z [8/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-338/JHipsterGeneratedPRNG.qlx.
+2025-01-07T18:42:40.9334833Z [9/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-335/PredictableSeed.qlx.
+2025-01-07T18:42:40.9998033Z [10/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-552/UrlForward.qlx.
+2025-01-07T18:42:41.1012364Z [11/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-1204/StaticInitializationVector.qlx.
+2025-01-07T18:42:41.1353456Z [12/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.qlx.
+2025-01-07T18:42:41.1684038Z [13/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-601/UrlRedirect.qlx.
+2025-01-07T18:42:41.2057104Z [14/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-326/InsufficientKeySize.qlx.
+2025-01-07T18:42:41.3933948Z [15/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-266/IntentUriPermissionManipulation.qlx.
+2025-01-07T18:42:41.4333425Z [16/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-327/BrokenCryptoAlgorithm.qlx.
+2025-01-07T18:42:41.4447586Z [17/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-470/FragmentInjection.qlx.
+2025-01-07T18:42:41.6013395Z [18/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-614/InsecureCookie.qlx.
+2025-01-07T18:42:41.7238741Z [19/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-927/ImplicitPendingIntents.qlx.
+2025-01-07T18:42:41.9054606Z [20/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-078/ExecUnescaped.qlx.
+2025-01-07T18:42:42.0071684Z [21/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-078/ExecTainted.qlx.
+2025-01-07T18:42:42.1362985Z [22/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-502/UnsafeDeserialization.qlx.
+2025-01-07T18:42:42.1693750Z [23/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-074/JndiInjection.qlx.
+2025-01-07T18:42:42.3529402Z [24/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-074/XsltInjection.qlx.
+2025-01-07T18:42:42.5282467Z [25/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-079/XSS.qlx.
+2025-01-07T18:42:42.5558942Z [26/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-020/OverlyLargeRange.qlx.
+2025-01-07T18:42:42.6290723Z [27/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-134/ExternallyControlledFormatString.qlx.
+2025-01-07T18:42:42.7679384Z [28/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/GroovyInjection.qlx.
+2025-01-07T18:42:42.7795863Z [29/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/JexlInjection.qlx.
+2025-01-07T18:42:42.8462669Z [30/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/MvelInjection.qlx.
+2025-01-07T18:42:42.9486331Z [31/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/TemplateInjection.qlx.
+2025-01-07T18:42:42.9657063Z [32/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/SpelInjection.qlx.
+2025-01-07T18:42:43.0498160Z [33/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/InsecureBeanValidation.qlx.
+2025-01-07T18:42:43.1684073Z [34/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-022/ZipSlip.qlx.
+2025-01-07T18:42:43.1711527Z [35/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-022/TaintedPath.qlx.
+2025-01-07T18:42:43.1919279Z [36/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-829/InsecureDependencyResolution.qlx.
+2025-01-07T18:42:43.3387200Z [37/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-611/XXE.qlx.
+2025-01-07T18:42:43.3683245Z [38/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.qlx.
+2025-01-07T18:42:43.3882408Z [39/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.qlx.
+2025-01-07T18:42:43.4982491Z [40/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-295/InsecureTrustManager.qlx.
+2025-01-07T18:42:43.5070049Z [41/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-297/UnsafeHostnameVerification.qlx.
+2025-01-07T18:42:43.6327454Z [42/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-780/RsaWithoutOaep.qlx.
+2025-01-07T18:42:43.6699454Z [43/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/RegexInjection.qlx.
+2025-01-07T18:42:43.6894081Z [44/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-489/DebuggableAttributeEnabled.qlx.
+2025-01-07T18:42:43.8602176Z [45/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/PolynomialReDoS.qlx.
+2025-01-07T18:42:43.8955264Z [46/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/ReDoS.qlx.
+2025-01-07T18:42:43.9091385Z [47/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-489/WebviewDebuggingEnabled.qlx.
+2025-01-07T18:42:43.9265869Z [48/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-1104/MavenPomDependsOnBintray.qlx.
+2025-01-07T18:42:44.0362687Z [49/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-441/UnsafeContentUriResolution.qlx.
+2025-01-07T18:42:44.0755703Z [50/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-918/RequestForgery.qlx.
+2025-01-07T18:42:44.0973502Z [51/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-347/MissingJWTSignatureCheck.qlx.
+2025-01-07T18:42:44.1930373Z [52/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-023/PartialPathTraversalFromRemote.qlx.
+2025-01-07T18:42:44.2181462Z [53/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-807/TaintedPermissionsCheck.qlx.
+2025-01-07T18:42:44.2345292Z [54/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-352/SpringCSRFProtection.qlx.
+2025-01-07T18:42:44.2853162Z [55/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-209/StackTraceExposure.qlx.
+2025-01-07T18:42:44.3787230Z [56/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.qlx.
+2025-01-07T18:42:44.3996146Z [57/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-643/XPathInjection.qlx.
+2025-01-07T18:42:44.5556350Z [58/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-917/OgnlInjection.qlx.
+2025-01-07T18:42:44.5690246Z [59/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-089/SqlTainted.qlx.
+2025-01-07T18:42:44.5745302Z [60/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.qlx.
+2025-01-07T18:42:44.7217484Z [61/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-522/InsecureLdapAuth.qlx.
+2025-01-07T18:42:44.7417197Z [62/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-732/ReadingFromWorldWritableFile.qlx.
+2025-01-07T18:42:44.7541563Z [63/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/DatabaseQualityDiagnostics.qlx.
+2025-01-07T18:42:44.7631806Z [64/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/ExtractionErrors.qlx.
+2025-01-07T18:42:44.7715030Z [65/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/SuccessfullyExtractedFiles.qlx.
+2025-01-07T18:42:44.7789641Z [66/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/ExtractionWarnings.qlx.
+2025-01-07T18:42:44.7944623Z [67/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/ExternalLibraryUsage.qlx.
+2025-01-07T18:42:44.8417702Z [68/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-681/NumericCastTainted.qlx.
+2025-01-07T18:42:44.8779374Z [69/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalTaint.qlx.
+2025-01-07T18:42:44.8972716Z [70/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-090/LdapInjection.qlx.
+2025-01-07T18:42:44.9061385Z [71/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/ExtractorInformation.qlx.
+2025-01-07T18:42:44.9517814Z [72/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalSources.qlx.
+2025-01-07T18:42:45.4458620Z [73/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalSinks.qlx.
+2025-01-07T18:42:45.5525704Z [74/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCodeKotlin.qlx.
+2025-01-07T18:42:45.5670817Z [75/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/UnsupportedExternalAPIs.qlx.
+2025-01-07T18:42:45.5974249Z [76/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalApis.qlx.
+2025-01-07T18:42:45.6003901Z [77/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCodeJava.qlx.
+2025-01-07T18:42:45.6005666Z [78/78] Loaded /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCode.qlx.
+2025-01-07T18:42:46.1357643Z Starting evaluation of codeql/java-queries/Diagnostics/SuccessfullyExtractedFiles.ql.
+2025-01-07T18:42:46.1358912Z Starting evaluation of codeql/java-queries/Likely Bugs/Arithmetic/InformationLoss.ql.
+2025-01-07T18:42:46.1360468Z Starting evaluation of codeql/java-queries/Diagnostics/ExtractionWarnings.ql.
+2025-01-07T18:42:46.1361444Z Starting evaluation of codeql/java-queries/Diagnostics/ExtractionErrors.ql.
+2025-01-07T18:42:46.1423897Z Starting evaluation of codeql/java-queries/Metrics/Summaries/LinesOfCode.ql.
+2025-01-07T18:42:46.1425158Z Starting evaluation of codeql/java-queries/Metrics/Summaries/LinesOfCodeJava.ql.
+2025-01-07T18:42:46.1426169Z Starting evaluation of codeql/java-queries/Metrics/Summaries/LinesOfCodeKotlin.ql.
+2025-01-07T18:42:46.1662625Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-020/OverlyLargeRange.ql.
+2025-01-07T18:42:46.4090434Z [1/78 eval 263ms] Evaluation done; writing results to codeql/java-queries/Diagnostics/ExtractionWarnings.bqrs.
+2025-01-07T18:42:46.4884078Z [2/78 eval 352ms] Evaluation done; writing results to codeql/java-queries/Diagnostics/ExtractionErrors.bqrs.
+2025-01-07T18:42:46.5972073Z [3/78 eval 462ms] Evaluation done; writing results to codeql/java-queries/Likely Bugs/Arithmetic/InformationLoss.bqrs.
+2025-01-07T18:42:46.6926021Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-022/TaintedPath.ql.
+2025-01-07T18:42:47.1112173Z [4/78 eval 969ms] Evaluation done; writing results to codeql/java-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2025-01-07T18:42:47.1140138Z [5/78 eval 972ms] Evaluation done; writing results to codeql/java-queries/Metrics/Summaries/LinesOfCodeJava.bqrs.
+2025-01-07T18:42:47.1386360Z [6/78 eval 996ms] Evaluation done; writing results to codeql/java-queries/Metrics/Summaries/LinesOfCodeKotlin.bqrs.
+2025-01-07T18:42:47.4547237Z [7/78 eval 1.3s] Evaluation done; writing results to codeql/java-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2025-01-07T18:42:47.8564437Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-022/ZipSlip.ql.
+2025-01-07T18:42:47.9027313Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-023/PartialPathTraversalFromRemote.ql.
+2025-01-07T18:42:47.9444509Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-074/JndiInjection.ql.
+2025-01-07T18:42:47.9870980Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-074/XsltInjection.ql.
+2025-01-07T18:42:48.1370454Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-078/ExecTainted.ql.
+2025-01-07T18:42:48.1742017Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-078/ExecUnescaped.ql.
+2025-01-07T18:42:48.1756135Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-079/XSS.ql.
+2025-01-07T18:42:48.2202419Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-089/SqlTainted.ql.
+2025-01-07T18:42:48.2949975Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-090/LdapInjection.ql.
+2025-01-07T18:42:48.2954936Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/InsecureBeanValidation.ql.
+2025-01-07T18:42:48.2956085Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/GroovyInjection.ql.
+2025-01-07T18:42:48.2957254Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/JexlInjection.ql.
+2025-01-07T18:42:48.4829317Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/MvelInjection.ql.
+2025-01-07T18:42:48.5125958Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/SpelInjection.ql.
+2025-01-07T18:42:48.5692488Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-094/TemplateInjection.ql.
+2025-01-07T18:42:48.6082228Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+2025-01-07T18:42:48.6196314Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-113/NettyResponseSplitting.ql.
+2025-01-07T18:42:48.6214186Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-113/ResponseSplitting.ql.
+2025-01-07T18:42:48.6215583Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-1204/StaticInitializationVector.ql.
+2025-01-07T18:42:48.6217043Z [8/78 eval 2ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-113/NettyResponseSplitting.bqrs.
+2025-01-07T18:42:48.6220997Z [9/78 eval 14ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-1104/MavenPomDependsOnBintray.bqrs.
+2025-01-07T18:42:48.6222449Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-134/ExternallyControlledFormatString.ql.
+2025-01-07T18:42:48.6224577Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.ql.
+2025-01-07T18:42:48.6228415Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-209/StackTraceExposure.ql.
+2025-01-07T18:42:48.6920676Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-266/IntentUriPermissionManipulation.ql.
+2025-01-07T18:42:48.7057825Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.ql.
+2025-01-07T18:42:48.7083907Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.ql.
+2025-01-07T18:42:48.7093419Z [10/78 eval 3ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.bqrs.
+2025-01-07T18:42:48.7144895Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-295/InsecureTrustManager.ql.
+2025-01-07T18:42:48.7467031Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-297/UnsafeHostnameVerification.ql.
+2025-01-07T18:42:48.7562291Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-312/CleartextStorageCookie.ql.
+2025-01-07T18:42:48.8830583Z [11/78 eval 125ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-312/CleartextStorageCookie.bqrs.
+2025-01-07T18:42:48.8849709Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-326/InsufficientKeySize.ql.
+2025-01-07T18:42:48.9127104Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql.
+2025-01-07T18:42:48.9288558Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-330/InsecureRandomness.ql.
+2025-01-07T18:42:48.9298235Z [12/78 eval 220ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.bqrs.
+2025-01-07T18:42:48.9574900Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-335/PredictableSeed.ql.
+2025-01-07T18:42:48.9576614Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+2025-01-07T18:42:48.9919551Z [13/78 eval 34ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-338/JHipsterGeneratedPRNG.bqrs.
+2025-01-07T18:42:49.0942999Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-347/MissingJWTSignatureCheck.ql.
+2025-01-07T18:42:49.0944029Z [14/78 eval 137ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-335/PredictableSeed.bqrs.
+2025-01-07T18:42:49.1182225Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-352/SpringCSRFProtection.ql.
+2025-01-07T18:42:49.1196490Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-441/UnsafeContentUriResolution.ql.
+2025-01-07T18:42:49.1679043Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-470/FragmentInjection.ql.
+2025-01-07T18:42:49.1835618Z [15/78 eval 64ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-352/SpringCSRFProtection.bqrs.
+2025-01-07T18:42:49.1837492Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.ql.
+2025-01-07T18:42:49.1881224Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-489/DebuggableAttributeEnabled.ql.
+2025-01-07T18:42:49.1882585Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-489/WebviewDebuggingEnabled.ql.
+2025-01-07T18:42:49.2111225Z [16/78 eval 27ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.bqrs.
+2025-01-07T18:42:49.2128989Z [17/78 eval 26ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-489/DebuggableAttributeEnabled.bqrs.
+2025-01-07T18:42:49.3550296Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-502/UnsafeDeserialization.ql.
+2025-01-07T18:42:49.4035966Z [18/78 eval 217ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-489/WebviewDebuggingEnabled.bqrs.
+2025-01-07T18:42:49.4555643Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-522/InsecureLdapAuth.ql.
+2025-01-07T18:42:49.4810144Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-552/UrlForward.ql.
+2025-01-07T18:42:49.5026907Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-601/UrlRedirect.ql.
+2025-01-07T18:42:49.5229756Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-611/XXE.ql.
+2025-01-07T18:42:49.6423916Z [19/78 eval 1.7s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-023/PartialPathTraversalFromRemote.bqrs.
+2025-01-07T18:42:49.7298308Z [20/78 eval 1.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-078/ExecTainted.bqrs.
+2025-01-07T18:42:49.8200146Z [21/78 eval 1.1s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-297/UnsafeHostnameVerification.bqrs.
+2025-01-07T18:42:49.9042619Z [22/78 eval 3.7s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-020/OverlyLargeRange.bqrs.
+2025-01-07T18:42:50.0213917Z [23/78 eval 1.8s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-078/ExecUnescaped.bqrs.
+2025-01-07T18:42:50.1436809Z [24/78 eval 2.2s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-074/JndiInjection.bqrs.
+2025-01-07T18:42:50.2413207Z [25/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-022/ZipSlip.bqrs.
+2025-01-07T18:42:50.5719305Z [26/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-074/XsltInjection.bqrs.
+2025-01-07T18:42:50.6638030Z [27/78 eval 4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-022/TaintedPath.bqrs.
+2025-01-07T18:42:50.6641640Z [28/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-089/SqlTainted.bqrs.
+2025-01-07T18:42:50.6645394Z [29/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/GroovyInjection.bqrs.
+2025-01-07T18:42:50.6648361Z [30/78 eval 1.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-441/UnsafeContentUriResolution.bqrs.
+2025-01-07T18:42:50.8255333Z [31/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/JexlInjection.bqrs.
+2025-01-07T18:42:50.8736631Z [32/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-090/LdapInjection.bqrs.
+2025-01-07T18:42:50.9337290Z [33/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/SpelInjection.bqrs.
+2025-01-07T18:42:50.9659762Z [34/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/TemplateInjection.bqrs.
+2025-01-07T18:42:51.0198725Z [35/78 eval 2.7s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/InsecureBeanValidation.bqrs.
+2025-01-07T18:42:51.0491389Z [36/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-094/MvelInjection.bqrs.
+2025-01-07T18:42:51.1244889Z [37/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-113/ResponseSplitting.bqrs.
+2025-01-07T18:42:51.1865011Z [38/78 eval 3s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-079/XSS.bqrs.
+2025-01-07T18:42:51.2274284Z [39/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-134/ExternallyControlledFormatString.bqrs.
+2025-01-07T18:42:51.3177344Z [40/78 eval 2.7s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-1204/StaticInitializationVector.bqrs.
+2025-01-07T18:42:51.3839534Z [41/78 eval 2.8s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.bqrs.
+2025-01-07T18:42:51.4267914Z [42/78 eval 2.8s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-209/StackTraceExposure.bqrs.
+2025-01-07T18:42:51.4446173Z [43/78 eval 2.8s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-266/IntentUriPermissionManipulation.bqrs.
+2025-01-07T18:42:51.4763830Z [44/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-327/BrokenCryptoAlgorithm.bqrs.
+2025-01-07T18:42:51.4991630Z [45/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-326/InsufficientKeySize.bqrs.
+2025-01-07T18:42:51.5206959Z [46/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-347/MissingJWTSignatureCheck.bqrs.
+2025-01-07T18:42:51.5408660Z [47/78 eval 2.6s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-330/InsecureRandomness.bqrs.
+2025-01-07T18:42:51.6372559Z [48/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-470/FragmentInjection.bqrs.
+2025-01-07T18:42:51.6406925Z [49/78 eval 2.9s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-295/InsecureTrustManager.bqrs.
+2025-01-07T18:42:51.7274344Z [50/78 eval 2.3s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-522/InsecureLdapAuth.bqrs.
+2025-01-07T18:42:51.8768822Z [51/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-502/UnsafeDeserialization.bqrs.
+2025-01-07T18:42:51.9009410Z [52/78 eval 2.4s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-552/UrlForward.bqrs.
+2025-01-07T18:42:51.9062603Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-614/InsecureCookie.ql.
+2025-01-07T18:42:51.9072781Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-643/XPathInjection.ql.
+2025-01-07T18:42:51.9387474Z [53/78 eval 32ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-614/InsecureCookie.bqrs.
+2025-01-07T18:42:51.9620324Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-681/NumericCastTainted.ql.
+2025-01-07T18:42:51.9791878Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-730/PolynomialReDoS.ql.
+2025-01-07T18:42:51.9913252Z [54/78 eval 83ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-643/XPathInjection.bqrs.
+2025-01-07T18:42:51.9914631Z [55/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-601/UrlRedirect.bqrs.
+2025-01-07T18:42:52.0595650Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-730/ReDoS.ql.
+2025-01-07T18:42:52.0987912Z [56/78 eval 2.5s] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-611/XXE.bqrs.
+2025-01-07T18:42:52.0988920Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-730/RegexInjection.ql.
+2025-01-07T18:42:52.0997883Z [57/78 eval 120ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-730/PolynomialReDoS.bqrs.
+2025-01-07T18:42:52.2048999Z [58/78 eval 144ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-730/ReDoS.bqrs.
+2025-01-07T18:42:52.2052007Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+2025-01-07T18:42:52.2065345Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-780/RsaWithoutOaep.ql.
+2025-01-07T18:42:52.2137204Z [59/78 eval 9ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-732/ReadingFromWorldWritableFile.bqrs.
+2025-01-07T18:42:52.2208700Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+2025-01-07T18:42:52.2532089Z [60/78 eval 152ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-730/RegexInjection.bqrs.
+2025-01-07T18:42:52.2733643Z [61/78 eval 311ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-681/NumericCastTainted.bqrs.
+2025-01-07T18:42:52.2742294Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-829/InsecureDependencyResolution.ql.
+2025-01-07T18:42:52.2747217Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-917/OgnlInjection.ql.
+2025-01-07T18:42:52.2748466Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-918/RequestForgery.ql.
+2025-01-07T18:42:52.2749743Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-925/ImproperIntentVerification.ql.
+2025-01-07T18:42:52.2765156Z [62/78 eval 2ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-829/InsecureDependencyResolution.bqrs.
+2025-01-07T18:42:52.3020638Z [63/78 eval 27ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-925/ImproperIntentVerification.bqrs.
+2025-01-07T18:42:52.3269562Z [64/78 eval 120ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-780/RsaWithoutOaep.bqrs.
+2025-01-07T18:42:52.3314481Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.ql.
+2025-01-07T18:42:52.3339168Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-927/ImplicitPendingIntents.ql.
+2025-01-07T18:42:52.3365938Z [65/78 eval 5ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.bqrs.
+2025-01-07T18:42:52.3470541Z [66/78 eval 126ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-807/TaintedPermissionsCheck.bqrs.
+2025-01-07T18:42:52.3631973Z Starting evaluation of codeql/java-queries/Security/CWE/CWE-940/AndroidIntentRedirection.ql.
+2025-01-07T18:42:52.3940263Z [67/78 eval 119ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-917/OgnlInjection.bqrs.
+2025-01-07T18:42:52.3984688Z Starting evaluation of codeql/java-queries/Telemetry/DatabaseQualityDiagnostics.ql.
+2025-01-07T18:42:52.4111510Z [68/78 eval 136ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-918/RequestForgery.bqrs.
+2025-01-07T18:42:52.4363573Z [69/78 eval 102ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-927/ImplicitPendingIntents.bqrs.
+2025-01-07T18:42:52.4587396Z Starting evaluation of codeql/java-queries/Telemetry/ExternalLibraryUsage.ql.
+2025-01-07T18:42:52.5460589Z [70/78 eval 184ms] Evaluation done; writing results to codeql/java-queries/Security/CWE/CWE-940/AndroidIntentRedirection.bqrs.
+2025-01-07T18:42:52.5462419Z Starting evaluation of codeql/java-queries/Telemetry/SupportedExternalApis.ql.
+2025-01-07T18:42:52.5490824Z [71/78 eval 149ms] Evaluation done; writing results to codeql/java-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2025-01-07T18:42:52.5492065Z Starting evaluation of codeql/java-queries/Telemetry/ExtractorInformation.ql.
+2025-01-07T18:42:52.5810166Z Starting evaluation of codeql/java-queries/Telemetry/SupportedExternalSinks.ql.
+2025-01-07T18:42:52.5813784Z Starting evaluation of codeql/java-queries/Telemetry/SupportedExternalSources.ql.
+2025-01-07T18:42:52.5862044Z [72/78 eval 37ms] Evaluation done; writing results to codeql/java-queries/Telemetry/ExtractorInformation.bqrs.
+2025-01-07T18:42:52.5993956Z [73/78 eval 148ms] Evaluation done; writing results to codeql/java-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2025-01-07T18:42:53.1323717Z Starting evaluation of codeql/java-queries/Telemetry/SupportedExternalTaint.ql.
+2025-01-07T18:42:53.1346856Z [74/78 eval 588ms] Evaluation done; writing results to codeql/java-queries/Telemetry/SupportedExternalApis.bqrs.
+2025-01-07T18:42:53.1350070Z Starting evaluation of codeql/java-queries/Telemetry/UnsupportedExternalAPIs.ql.
+2025-01-07T18:42:53.1991344Z [75/78 eval 618ms] Evaluation done; writing results to codeql/java-queries/Telemetry/SupportedExternalSinks.bqrs.
+2025-01-07T18:42:53.2092247Z [76/78 eval 74ms] Evaluation done; writing results to codeql/java-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2025-01-07T18:42:53.2138811Z [77/78 eval 632ms] Evaluation done; writing results to codeql/java-queries/Telemetry/SupportedExternalSources.bqrs.
+2025-01-07T18:42:53.2280593Z [78/78 eval 96ms] Evaluation done; writing results to codeql/java-queries/Telemetry/SupportedExternalTaint.bqrs.
+2025-01-07T18:42:53.2286422Z Shutting down query evaluator.
+2025-01-07T18:42:53.3429974Z ##[group]Interpreting results for java
+2025-01-07T18:42:54.0672906Z Writing logs to /home/runner/work/_temp/codeql_databases/java/log/database-interpret-results-20250107.184254.063.log.
+2025-01-07T18:42:54.2414695Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10.
+2025-01-07T18:42:55.9764816Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Likely Bugs/Arithmetic/InformationLoss.ql...
+2025-01-07T18:42:55.9994435Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Likely Bugs/Arithmetic/InformationLoss.bqrs.
+2025-01-07T18:42:56.0185937Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-113/NettyResponseSplitting.ql...
+2025-01-07T18:42:56.0326730Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-113/NettyResponseSplitting.bqrs.
+2025-01-07T18:42:56.0338205Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-113/ResponseSplitting.ql...
+2025-01-07T18:42:56.0446066Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-113/ResponseSplitting.bqrs.
+2025-01-07T18:42:56.0453642Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-330/InsecureRandomness.ql...
+2025-01-07T18:42:56.0545702Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-330/InsecureRandomness.bqrs.
+2025-01-07T18:42:56.0553628Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-940/AndroidIntentRedirection.ql...
+2025-01-07T18:42:56.0631755Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-940/AndroidIntentRedirection.bqrs.
+2025-01-07T18:42:56.0640146Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-925/ImproperIntentVerification.ql...
+2025-01-07T18:42:56.0723868Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-925/ImproperIntentVerification.bqrs.
+2025-01-07T18:42:56.0730611Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-312/CleartextStorageCookie.ql...
+2025-01-07T18:42:56.0803565Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-312/CleartextStorageCookie.bqrs.
+2025-01-07T18:42:56.0810378Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-335/PredictableSeed.ql...
+2025-01-07T18:42:56.0878859Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-335/PredictableSeed.bqrs.
+2025-01-07T18:42:56.0885308Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-552/UrlForward.ql...
+2025-01-07T18:42:56.0956870Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-552/UrlForward.bqrs.
+2025-01-07T18:42:56.0964048Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql...
+2025-01-07T18:42:56.1028336Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-338/JHipsterGeneratedPRNG.bqrs.
+2025-01-07T18:42:56.1035082Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-1204/StaticInitializationVector.ql...
+2025-01-07T18:42:56.1102925Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-1204/StaticInitializationVector.bqrs.
+2025-01-07T18:42:56.1111688Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-601/UrlRedirect.ql...
+2025-01-07T18:42:56.1177912Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-601/UrlRedirect.bqrs.
+2025-01-07T18:42:56.1184686Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-326/InsufficientKeySize.ql...
+2025-01-07T18:42:56.1246738Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-326/InsufficientKeySize.bqrs.
+2025-01-07T18:42:56.1254084Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.ql...
+2025-01-07T18:42:56.1316663Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.bqrs.
+2025-01-07T18:42:56.1325348Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-470/FragmentInjection.ql...
+2025-01-07T18:42:56.1396121Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-470/FragmentInjection.bqrs.
+2025-01-07T18:42:56.1403249Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-266/IntentUriPermissionManipulation.ql...
+2025-01-07T18:42:56.1475162Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-266/IntentUriPermissionManipulation.bqrs.
+2025-01-07T18:42:56.1482064Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql...
+2025-01-07T18:42:56.1545431Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-327/BrokenCryptoAlgorithm.bqrs.
+2025-01-07T18:42:56.1551352Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-502/UnsafeDeserialization.ql...
+2025-01-07T18:42:56.1613476Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-502/UnsafeDeserialization.bqrs.
+2025-01-07T18:42:56.1619465Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-927/ImplicitPendingIntents.ql...
+2025-01-07T18:42:56.1707288Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-927/ImplicitPendingIntents.bqrs.
+2025-01-07T18:42:56.1721277Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-614/InsecureCookie.ql...
+2025-01-07T18:42:56.1792766Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-614/InsecureCookie.bqrs.
+2025-01-07T18:42:56.1806146Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-078/ExecUnescaped.ql...
+2025-01-07T18:42:56.1886462Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-078/ExecUnescaped.bqrs.
+2025-01-07T18:42:56.1896579Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-078/ExecTainted.ql...
+2025-01-07T18:42:56.1958881Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-078/ExecTainted.bqrs.
+2025-01-07T18:42:56.1968004Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-074/JndiInjection.ql...
+2025-01-07T18:42:56.2028481Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-074/JndiInjection.bqrs.
+2025-01-07T18:42:56.2037045Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-074/XsltInjection.ql...
+2025-01-07T18:42:56.2099357Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-074/XsltInjection.bqrs.
+2025-01-07T18:42:56.2105044Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-020/OverlyLargeRange.ql...
+2025-01-07T18:42:56.2162170Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-020/OverlyLargeRange.bqrs.
+2025-01-07T18:42:56.2168435Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-079/XSS.ql...
+2025-01-07T18:42:56.2226511Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-079/XSS.bqrs.
+2025-01-07T18:42:56.2232762Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-134/ExternallyControlledFormatString.ql...
+2025-01-07T18:42:56.2292096Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-134/ExternallyControlledFormatString.bqrs.
+2025-01-07T18:42:56.2297970Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/JexlInjection.ql...
+2025-01-07T18:42:56.2359782Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/JexlInjection.bqrs.
+2025-01-07T18:42:56.2366546Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/GroovyInjection.ql...
+2025-01-07T18:42:56.2425534Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/GroovyInjection.bqrs.
+2025-01-07T18:42:56.2431795Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/MvelInjection.ql...
+2025-01-07T18:42:56.2489071Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/MvelInjection.bqrs.
+2025-01-07T18:42:56.2495019Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/SpelInjection.ql...
+2025-01-07T18:42:56.2552165Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/SpelInjection.bqrs.
+2025-01-07T18:42:56.2557807Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/TemplateInjection.ql...
+2025-01-07T18:42:56.2621673Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/TemplateInjection.bqrs.
+2025-01-07T18:42:56.2627373Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-094/InsecureBeanValidation.ql...
+2025-01-07T18:42:56.2688847Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/InsecureBeanValidation.bqrs.
+2025-01-07T18:42:56.2694991Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-022/TaintedPath.ql...
+2025-01-07T18:42:56.2748019Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-022/TaintedPath.bqrs.
+2025-01-07T18:42:56.2754216Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-022/ZipSlip.ql...
+2025-01-07T18:42:56.2806640Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-022/ZipSlip.bqrs.
+2025-01-07T18:42:56.2812582Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-611/XXE.ql...
+2025-01-07T18:42:56.2862492Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-611/XXE.bqrs.
+2025-01-07T18:42:56.2868491Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-297/UnsafeHostnameVerification.ql...
+2025-01-07T18:42:56.2924141Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-297/UnsafeHostnameVerification.bqrs.
+2025-01-07T18:42:56.2929933Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-829/InsecureDependencyResolution.ql...
+2025-01-07T18:42:56.2991905Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-829/InsecureDependencyResolution.bqrs.
+2025-01-07T18:42:56.2997861Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-295/InsecureTrustManager.ql...
+2025-01-07T18:42:56.3051289Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-295/InsecureTrustManager.bqrs.
+2025-01-07T18:42:56.3058525Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.ql...
+2025-01-07T18:42:56.3108911Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.bqrs.
+2025-01-07T18:42:56.3114655Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.ql...
+2025-01-07T18:42:56.3163575Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.bqrs.
+2025-01-07T18:42:56.3170112Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-780/RsaWithoutOaep.ql...
+2025-01-07T18:42:56.3219986Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-780/RsaWithoutOaep.bqrs.
+2025-01-07T18:42:56.3226791Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/PolynomialReDoS.ql...
+2025-01-07T18:42:56.3285795Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/PolynomialReDoS.bqrs.
+2025-01-07T18:42:56.3292379Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/RegexInjection.ql...
+2025-01-07T18:42:56.3344277Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/RegexInjection.bqrs.
+2025-01-07T18:42:56.3350114Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-730/ReDoS.ql...
+2025-01-07T18:42:56.3403468Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/ReDoS.bqrs.
+2025-01-07T18:42:56.3409842Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-489/DebuggableAttributeEnabled.ql...
+2025-01-07T18:42:56.3458570Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-489/DebuggableAttributeEnabled.bqrs.
+2025-01-07T18:42:56.3463741Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-489/WebviewDebuggingEnabled.ql...
+2025-01-07T18:42:56.3512172Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-489/WebviewDebuggingEnabled.bqrs.
+2025-01-07T18:42:56.3517640Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-918/RequestForgery.ql...
+2025-01-07T18:42:56.3565295Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-918/RequestForgery.bqrs.
+2025-01-07T18:42:56.3571505Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-441/UnsafeContentUriResolution.ql...
+2025-01-07T18:42:56.3629264Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-441/UnsafeContentUriResolution.bqrs.
+2025-01-07T18:42:56.3635276Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql...
+2025-01-07T18:42:56.3684187Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-1104/MavenPomDependsOnBintray.bqrs.
+2025-01-07T18:42:56.3689480Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-347/MissingJWTSignatureCheck.ql...
+2025-01-07T18:42:56.3735188Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-347/MissingJWTSignatureCheck.bqrs.
+2025-01-07T18:42:56.3740773Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-807/TaintedPermissionsCheck.ql...
+2025-01-07T18:42:56.3789627Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-807/TaintedPermissionsCheck.bqrs.
+2025-01-07T18:42:56.3800257Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-023/PartialPathTraversalFromRemote.ql...
+2025-01-07T18:42:56.3841438Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-023/PartialPathTraversalFromRemote.bqrs.
+2025-01-07T18:42:56.3846538Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-209/StackTraceExposure.ql...
+2025-01-07T18:42:56.3894121Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-209/StackTraceExposure.bqrs.
+2025-01-07T18:42:56.3900068Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.ql...
+2025-01-07T18:42:56.3949695Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.bqrs.
+2025-01-07T18:42:56.3955205Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-352/SpringCSRFProtection.ql...
+2025-01-07T18:42:56.4000158Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-352/SpringCSRFProtection.bqrs.
+2025-01-07T18:42:56.4005395Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-643/XPathInjection.ql...
+2025-01-07T18:42:56.4060801Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-643/XPathInjection.bqrs.
+2025-01-07T18:42:56.4066201Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-917/OgnlInjection.ql...
+2025-01-07T18:42:56.4113217Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-917/OgnlInjection.bqrs.
+2025-01-07T18:42:56.4118238Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-089/SqlTainted.ql...
+2025-01-07T18:42:56.4190344Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-089/SqlTainted.bqrs.
+2025-01-07T18:42:56.4196051Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-522/InsecureLdapAuth.ql...
+2025-01-07T18:42:56.4248540Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-522/InsecureLdapAuth.bqrs.
+2025-01-07T18:42:56.4254113Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.ql...
+2025-01-07T18:42:56.4299347Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.bqrs.
+2025-01-07T18:42:56.4304447Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-681/NumericCastTainted.ql...
+2025-01-07T18:42:56.4351000Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-681/NumericCastTainted.bqrs.
+2025-01-07T18:42:56.4356694Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-090/LdapInjection.ql...
+2025-01-07T18:42:56.4403876Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-090/LdapInjection.bqrs.
+2025-01-07T18:42:56.4409508Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql...
+2025-01-07T18:42:56.4476271Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-732/ReadingFromWorldWritableFile.bqrs.
+2025-01-07T18:42:56.4482000Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/DatabaseQualityDiagnostics.ql...
+2025-01-07T18:42:56.4527838Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2025-01-07T18:42:56.4531995Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/ExtractionErrors.ql...
+2025-01-07T18:42:56.4577902Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/ExtractionErrors.bqrs.
+2025-01-07T18:42:56.4581875Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/SuccessfullyExtractedFiles.ql...
+2025-01-07T18:42:56.4632928Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2025-01-07T18:42:56.4636415Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Diagnostics/ExtractionWarnings.ql...
+2025-01-07T18:42:56.4686382Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/ExtractionWarnings.bqrs.
+2025-01-07T18:42:56.4689499Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/ExternalLibraryUsage.ql...
+2025-01-07T18:42:56.4735145Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2025-01-07T18:42:56.4738240Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalTaint.ql...
+2025-01-07T18:42:56.4782854Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalTaint.bqrs.
+2025-01-07T18:42:56.4785978Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalSinks.ql...
+2025-01-07T18:42:56.4829757Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalSinks.bqrs.
+2025-01-07T18:42:56.4832635Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalSources.ql...
+2025-01-07T18:42:56.4875969Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalSources.bqrs.
+2025-01-07T18:42:56.4879210Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/ExtractorInformation.ql...
+2025-01-07T18:42:56.4920900Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/ExtractorInformation.bqrs.
+2025-01-07T18:42:56.4924092Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/SupportedExternalApis.ql...
+2025-01-07T18:42:56.4999802Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalApis.bqrs.
+2025-01-07T18:42:56.5005319Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Telemetry/UnsupportedExternalAPIs.ql...
+2025-01-07T18:42:56.5052038Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2025-01-07T18:42:56.5056669Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCodeKotlin.ql...
+2025-01-07T18:42:56.5099071Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCodeKotlin.bqrs.
+2025-01-07T18:42:56.5104525Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCode.ql...
+2025-01-07T18:42:56.5148888Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2025-01-07T18:42:56.5153903Z Interpreting /opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/qlpacks/codeql/java-queries/1.1.10/Metrics/Summaries/LinesOfCodeJava.ql...
+2025-01-07T18:42:56.5202757Z  ... found results file at /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCodeJava.bqrs.
+2025-01-07T18:42:56.6546460Z Interpreted problem query "Implicit narrowing conversion in compound assignment" (java/implicit-cast-in-compound-assignment) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Likely Bugs/Arithmetic/InformationLoss.bqrs.
+2025-01-07T18:42:56.6553176Z Interpreted problem query "Disabled Netty HTTP header validation" (java/netty-http-request-or-response-splitting) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-113/NettyResponseSplitting.bqrs.
+2025-01-07T18:42:56.6568680Z Interpreted pathproblem query "HTTP response splitting" (java/http-response-splitting) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-113/ResponseSplitting.bqrs.
+2025-01-07T18:42:56.6575066Z Interpreted pathproblem query "Insecure randomness" (java/insecure-randomness) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-330/InsecureRandomness.bqrs.
+2025-01-07T18:42:56.6580419Z Interpreted pathproblem query "Android Intent redirection" (java/android/intent-redirection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-940/AndroidIntentRedirection.bqrs.
+2025-01-07T18:42:56.6584891Z Interpreted problem query "Improper verification of intent by broadcast receiver" (java/improper-intent-verification) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-925/ImproperIntentVerification.bqrs.
+2025-01-07T18:42:56.6589737Z Interpreted problem query "Cleartext storage of sensitive information in cookie" (java/cleartext-storage-in-cookie) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-312/CleartextStorageCookie.bqrs.
+2025-01-07T18:42:56.6593793Z Interpreted problem query "Use of a predictable seed in a secure random number generator" (java/predictable-seed) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-335/PredictableSeed.bqrs.
+2025-01-07T18:42:56.6599719Z Interpreted pathproblem query "URL forward from a remote source" (java/unvalidated-url-forward) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-552/UrlForward.bqrs.
+2025-01-07T18:42:56.6604273Z Interpreted problem query "Detect JHipster Generator Vulnerability CVE-2019-16303" (java/jhipster-prng) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-338/JHipsterGeneratedPRNG.bqrs.
+2025-01-07T18:42:56.6610259Z Interpreted pathproblem query "Using a static initialization vector for encryption" (java/static-initialization-vector) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-1204/StaticInitializationVector.bqrs.
+2025-01-07T18:42:56.6615507Z Interpreted pathproblem query "URL redirection from remote source" (java/unvalidated-url-redirection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-601/UrlRedirect.bqrs.
+2025-01-07T18:42:56.6621032Z Interpreted pathproblem query "Use of a cryptographic algorithm with insufficient key size" (java/insufficient-key-size) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-326/InsufficientKeySize.bqrs.
+2025-01-07T18:42:56.6625977Z Interpreted problem query "Android fragment injection in PreferenceActivity" (java/android/fragment-injection-preference-activity) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.bqrs.
+2025-01-07T18:42:56.6631400Z Interpreted pathproblem query "Android fragment injection" (java/android/fragment-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-470/FragmentInjection.bqrs.
+2025-01-07T18:42:56.6637895Z Interpreted pathproblem query "Intent URI permission manipulation" (java/android/intent-uri-permission-manipulation) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-266/IntentUriPermissionManipulation.bqrs.
+2025-01-07T18:42:56.6643479Z Interpreted pathproblem query "Use of a broken or risky cryptographic algorithm" (java/weak-cryptographic-algorithm) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-327/BrokenCryptoAlgorithm.bqrs.
+2025-01-07T18:42:56.6656646Z Interpreted pathproblem query "Deserialization of user-controlled data" (java/unsafe-deserialization) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-502/UnsafeDeserialization.bqrs.
+2025-01-07T18:42:56.6662835Z Interpreted pathproblem query "Use of implicit PendingIntents" (java/android/implicit-pendingintents) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-927/ImplicitPendingIntents.bqrs.
+2025-01-07T18:42:56.6666937Z Interpreted problem query "Failure to use secure cookies" (java/insecure-cookie) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-614/InsecureCookie.bqrs.
+2025-01-07T18:42:56.6671715Z Interpreted problem query "Building a command line with string concatenation" (java/concatenated-command-line) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-078/ExecUnescaped.bqrs.
+2025-01-07T18:42:56.6676856Z Interpreted pathproblem query "Uncontrolled command line" (java/command-line-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-078/ExecTainted.bqrs.
+2025-01-07T18:42:56.6682851Z Interpreted pathproblem query "JNDI lookup with user-controlled name" (java/jndi-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-074/JndiInjection.bqrs.
+2025-01-07T18:42:56.6688076Z Interpreted pathproblem query "XSLT transformation with user-controlled stylesheet" (java/xslt-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-074/XsltInjection.bqrs.
+2025-01-07T18:42:56.6692805Z Interpreted problem query "Overly permissive regular expression range" (java/overly-large-range) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-020/OverlyLargeRange.bqrs.
+2025-01-07T18:42:56.6698065Z Interpreted pathproblem query "Cross-site scripting" (java/xss) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-079/XSS.bqrs.
+2025-01-07T18:42:56.6704053Z Interpreted pathproblem query "Use of externally-controlled format string" (java/tainted-format-string) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-134/ExternallyControlledFormatString.bqrs.
+2025-01-07T18:42:56.6709360Z Interpreted pathproblem query "Expression language injection (JEXL)" (java/jexl-expression-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/JexlInjection.bqrs.
+2025-01-07T18:42:56.6714368Z Interpreted pathproblem query "Groovy Language injection" (java/groovy-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/GroovyInjection.bqrs.
+2025-01-07T18:42:56.6719958Z Interpreted pathproblem query "Expression language injection (MVEL)" (java/mvel-expression-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/MvelInjection.bqrs.
+2025-01-07T18:42:56.6725054Z Interpreted pathproblem query "Expression language injection (Spring)" (java/spel-expression-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/SpelInjection.bqrs.
+2025-01-07T18:42:56.6730776Z Interpreted pathproblem query "Server-side template injection" (java/server-side-template-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/TemplateInjection.bqrs.
+2025-01-07T18:42:56.6736424Z Interpreted pathproblem query "Insecure Bean Validation" (java/insecure-bean-validation) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-094/InsecureBeanValidation.bqrs.
+2025-01-07T18:42:56.6741916Z Interpreted pathproblem query "Uncontrolled data used in path expression" (java/path-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-022/TaintedPath.bqrs.
+2025-01-07T18:42:56.6770236Z Interpreted pathproblem query "Arbitrary file access during archive extraction ("Zip Slip")" (java/zipslip) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-022/ZipSlip.bqrs.
+2025-01-07T18:42:56.6773677Z Interpreted pathproblem query "Resolving XML external entity in user-controlled data" (java/xxe) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-611/XXE.bqrs.
+2025-01-07T18:42:56.6776198Z Interpreted pathproblem query "Unsafe hostname verification" (java/unsafe-hostname-verification) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-297/UnsafeHostnameVerification.bqrs.
+2025-01-07T18:42:56.6779107Z Interpreted problem query "Failure to use HTTPS or SFTP URL in Maven artifact upload/download" (java/maven/non-https-url) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-829/InsecureDependencyResolution.bqrs.
+2025-01-07T18:42:56.6782448Z Interpreted pathproblem query "`TrustManager` that accepts all certificates" (java/insecure-trustmanager) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-295/InsecureTrustManager.bqrs.
+2025-01-07T18:42:56.6785480Z Interpreted problem query "Android `WebView` that accepts all certificates" (java/improper-webview-certificate-validation) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.bqrs.
+2025-01-07T18:42:56.6789730Z Interpreted problem query "Implicitly exported Android component" (java/android/implicitly-exported-component) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.bqrs.
+2025-01-07T18:42:56.6792566Z Interpreted pathproblem query "Use of RSA algorithm without OAEP" (java/rsa-without-oaep) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-780/RsaWithoutOaep.bqrs.
+2025-01-07T18:42:56.6795320Z Interpreted pathproblem query "Polynomial regular expression used on uncontrolled data" (java/polynomial-redos) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/PolynomialReDoS.bqrs.
+2025-01-07T18:42:56.6799179Z Interpreted pathproblem query "Regular expression injection" (java/regex-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/RegexInjection.bqrs.
+2025-01-07T18:42:56.6801619Z Interpreted problem query "Inefficient regular expression" (java/redos) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-730/ReDoS.bqrs.
+2025-01-07T18:42:56.6805166Z Interpreted problem query "Android debuggable attribute enabled" (java/android/debuggable-attribute-enabled) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-489/DebuggableAttributeEnabled.bqrs.
+2025-01-07T18:42:56.6815017Z Interpreted pathproblem query "Android Webview debugging enabled" (java/android/webview-debugging-enabled) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-489/WebviewDebuggingEnabled.bqrs.
+2025-01-07T18:42:56.6838953Z Interpreted pathproblem query "Server-side request forgery" (java/ssrf) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-918/RequestForgery.bqrs.
+2025-01-07T18:42:56.6842290Z Interpreted pathproblem query "Uncontrolled data used in content resolution" (java/android/unsafe-content-uri-resolution) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-441/UnsafeContentUriResolution.bqrs.
+2025-01-07T18:42:56.6845608Z Interpreted problem query "Depending upon JCenter/Bintray as an artifact repository" (java/maven/dependency-upon-bintray) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-1104/MavenPomDependsOnBintray.bqrs.
+2025-01-07T18:42:56.6848643Z Interpreted pathproblem query "Missing JWT signature check" (java/missing-jwt-signature-check) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-347/MissingJWTSignatureCheck.bqrs.
+2025-01-07T18:42:56.6851558Z Interpreted pathproblem query "User-controlled data used in permissions check" (java/tainted-permissions-check) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-807/TaintedPermissionsCheck.bqrs.
+2025-01-07T18:42:56.6854613Z Interpreted pathproblem query "Partial path traversal vulnerability from remote" (java/partial-path-traversal-from-remote) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-023/PartialPathTraversalFromRemote.bqrs.
+2025-01-07T18:42:56.6857896Z Interpreted problem query "Information exposure through a stack trace" (java/stack-trace-exposure) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-209/StackTraceExposure.bqrs.
+2025-01-07T18:42:56.6861605Z Interpreted problem query "Information exposure through an error message" (java/error-message-exposure) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-209/SensitiveDataExposureThroughErrorMessage.bqrs.
+2025-01-07T18:42:56.6864791Z Interpreted problem query "Disabled Spring CSRF protection" (java/spring-disabled-csrf-protection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-352/SpringCSRFProtection.bqrs.
+2025-01-07T18:42:56.6867559Z Interpreted pathproblem query "XPath injection" (java/xml/xpath-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-643/XPathInjection.bqrs.
+2025-01-07T18:42:56.6874147Z Interpreted pathproblem query "OGNL Expression Language statement with user-controlled input" (java/ognl-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-917/OgnlInjection.bqrs.
+2025-01-07T18:42:56.6882448Z Interpreted pathproblem query "Query built from user-controlled sources" (java/sql-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-089/SqlTainted.bqrs.
+2025-01-07T18:42:56.6884885Z Interpreted pathproblem query "Insecure LDAP authentication" (java/insecure-ldap-auth) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-522/InsecureLdapAuth.bqrs.
+2025-01-07T18:42:56.6892488Z Interpreted problem query "Insecure local authentication" (java/android/insecure-local-authentication) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-287/AndroidInsecureLocalAuthentication.bqrs.
+2025-01-07T18:42:56.6895359Z Interpreted pathproblem query "User-controlled data in numeric cast" (java/tainted-numeric-cast) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-681/NumericCastTainted.bqrs.
+2025-01-07T18:42:56.6897976Z Interpreted pathproblem query "LDAP query built from user-controlled sources" (java/ldap-injection) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-090/LdapInjection.bqrs.
+2025-01-07T18:42:56.6900701Z Interpreted problem query "Reading from a world writable file" (java/world-writable-file-read) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Security/CWE/CWE-732/ReadingFromWorldWritableFile.bqrs.
+2025-01-07T18:42:56.6909318Z Interpreted diagnostic query "Low Java analysis quality" (java/diagnostic/database-quality) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/DatabaseQualityDiagnostics.bqrs.
+2025-01-07T18:42:56.6913427Z Interpreted diagnostic query "Extraction errors" (java/diagnostics/extraction-errors) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/ExtractionErrors.bqrs.
+2025-01-07T18:42:56.6917767Z Interpreted diagnostic query "Extracted files" (java/diagnostics/successfully-extracted-files) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2025-01-07T18:42:56.6921786Z Interpreted diagnostic query "Extraction warnings" (java/diagnostics/extraction-warnings) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Diagnostics/ExtractionWarnings.bqrs.
+2025-01-07T18:42:56.6942978Z Interpreted metric query "External libraries" (java/telemetry/external-libs) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2025-01-07T18:42:56.6948494Z Interpreted metric query "Supported flow steps in external libraries" (java/telemetry/supported-external-api-taint) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalTaint.bqrs.
+2025-01-07T18:42:56.6953315Z Interpreted metric query "Supported sinks in external libraries" (java/telemetry/supported-external-api-sinks) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalSinks.bqrs.
+2025-01-07T18:42:56.6958567Z Interpreted metric query "Supported sources in external libraries" (java/telemetry/supported-external-api-sources) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalSources.bqrs.
+2025-01-07T18:42:56.6963619Z Interpreted metric query "Java extraction information" (java/telemetry/extraction-information) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/ExtractorInformation.bqrs.
+2025-01-07T18:42:56.6969004Z Interpreted metric query "Usage of supported APIs coming from external libraries" (java/telemetry/supported-external-api) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/SupportedExternalApis.bqrs.
+2025-01-07T18:42:56.6973987Z Interpreted metric query "Usage of unsupported APIs coming from external libraries" (java/telemetry/unsupported-external-api) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2025-01-07T18:42:56.6979045Z Interpreted metric query "Total lines of Kotlin code in the database" (java/summary/lines-of-code-kotlin) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCodeKotlin.bqrs.
+2025-01-07T18:42:56.6983936Z Interpreted metric query "Total lines of Java/Kotlin code in the database" (java/summary/lines-of-code) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2025-01-07T18:42:56.6988550Z Interpreted metric query "Total lines of Java code in the database" (java/summary/lines-of-code-java) at path /home/runner/work/_temp/codeql_databases/java/results/codeql/java-queries/Metrics/Summaries/LinesOfCodeJava.bqrs.
+2025-01-07T18:42:56.8068804Z Interpreting file coverage baseline information
+2025-01-07T18:42:56.8075921Z Finished interpreting file coverage baseline information.
+2025-01-07T18:42:56.8086363Z Interpreting diagnostic messages...
+2025-01-07T18:42:56.8540943Z Found 7 raw diagnostic messages.
+2025-01-07T18:42:56.8639156Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2025-01-07T18:42:56.8667403Z Interpreted diagnostic messages (55ms).
+2025-01-07T18:42:57.0381824Z Exporting results to SARIF...
+2025-01-07T18:42:57.2043063Z Exported results to SARIF (165ms).
+2025-01-07T18:42:57.2273846Z ##[endgroup]
+2025-01-07T18:42:57.2274696Z CodeQL scanned 1 out of 2 Java files in this invocation. Check the status page for overall coverage information: https://github.com/hohn/codeql-workshop-sql-injection-java/security/code-scanning/tools/CodeQL/status/
+2025-01-07T18:42:57.2275857Z Analysis produced the following diagnostic information:
+2025-01-07T18:42:57.2276416Z ##[group]Java analysis found no usable build tool (1 result)
+2025-01-07T18:42:57.2277712Z   * Because no usable build tool (Gradle, Maven, etc) was found, build scripts could not be queried for guidance about the appropriate JDK version for the code being extracted, or precise dependency information. The default JDK will be used, and external dependencies will be inferred from the Java package names used.
+2025-01-07T18:42:57.2279146Z ##[endgroup]
+2025-01-07T18:42:57.2279521Z ##[group]Java analysis used the system default JDK (1 result)
+2025-01-07T18:42:57.2279843Z   * Java analysis used the system default JDK.
+2025-01-07T18:42:57.2280205Z ##[endgroup]
+2025-01-07T18:42:57.2280584Z ##[group]Java analysis with build-mode 'none' completed (1 result)
+2025-01-07T18:42:57.2280943Z   * Java analysis with build-mode 'none' completed.
+2025-01-07T18:42:57.2281322Z ##[endgroup]
+2025-01-07T18:42:57.2281764Z ##[group]1 duplicate classes filtered out (1 result)
+2025-01-07T18:42:57.2283222Z   * 1 files defined a class that clashes with the fully-qualified name of another scanned class. This means that only one of each clashing pair will be scanned. Consider restricting extraction to exclude one of the duplicate classes. See the full log for the specific files filtered out.
+2025-01-07T18:42:57.2284352Z ##[endgroup]
+2025-01-07T18:42:57.2284726Z ##[group]Java was extracted with build-mode set to 'none' (1 result)
+2025-01-07T18:42:57.2285561Z   * Java was extracted with build-mode set to 'none'. This means that all Java source in the working directory will be scanned, with build tools such as Maven and Gradle only contributing information about external dependencies.
+2025-01-07T18:42:57.2286461Z ##[endgroup]
+2025-01-07T18:42:57.2286570Z 
+2025-01-07T18:42:57.2286946Z ##[group]Cleaning up databases
+2025-01-07T18:42:57.2287562Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database cleanup /home/runner/work/_temp/codeql_databases/java --cache-cleanup=brutal
+2025-01-07T18:42:57.9017415Z Cleaning up existing TRAP files after import...
+2025-01-07T18:42:57.9074414Z TRAP files cleaned up (3ms).
+2025-01-07T18:42:57.9075227Z Cleaning up scratch directory...
+2025-01-07T18:42:57.9077123Z Scratch directory cleaned up (0ms).
+2025-01-07T18:42:57.9982956Z ##[endgroup]
+2025-01-07T18:42:57.9993541Z ##[group]Uploading results
+2025-01-07T18:42:57.9994014Z Processing sarif files: ["/home/runner/work/codeql-workshop-sql-injection-java/results/java.sarif"]
+2025-01-07T18:42:57.9995136Z Validating /home/runner/work/codeql-workshop-sql-injection-java/results/java.sarif
+2025-01-07T18:42:58.0949140Z Combining SARIF files using the CodeQL CLI
+2025-01-07T18:42:58.0972294Z Adding fingerprints to SARIF file. See https://docs.github.com/en/enterprise-cloud@latest/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning#providing-data-to-track-code-scanning-alerts-across-runs for more information.
+2025-01-07T18:42:58.1138932Z Uploading results
+2025-01-07T18:42:58.3122094Z Successfully uploaded results
+2025-01-07T18:42:58.3122828Z ##[endgroup]
+2025-01-07T18:42:58.3161576Z [command]/opt/hostedtoolcache/CodeQL/2.20.0/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/java --output=/home/runner/work/_temp/codeql_databases/java.zip --name=java
+2025-01-07T18:42:59.1726246Z Creating bundle metadata for /home/runner/work/_temp/codeql_databases/java...
+2025-01-07T18:42:59.5164377Z Creating zip file at /home/runner/work/_temp/codeql_databases/java.zip.
+2025-01-07T18:43:00.1576860Z Skipping upload of dependency cache for java as we cannot calculate a hash for the cache key.
+2025-01-07T18:43:00.1578577Z ##[group]Waiting for processing to finish
+2025-01-07T18:43:00.3296966Z Analysis upload status is complete.
+2025-01-07T18:43:00.3297758Z ##[endgroup]
+2025-01-07T18:43:00.4614771Z ##[group]Run actions/github-script@v7
+2025-01-07T18:43:00.4615068Z with:
+2025-01-07T18:43:00.4615386Z   script: core.setOutput(process.env.MATRIX_LANGUAGE.replaceAll("-", "_"), "OK");
+
+2025-01-07T18:43:00.4615917Z   github-token: ***
+2025-01-07T18:43:00.4616114Z   debug: false
+2025-01-07T18:43:00.4616325Z   user-agent: actions/github-script
+2025-01-07T18:43:00.4616571Z   result-encoding: json
+2025-01-07T18:43:00.4616763Z   retries: 0
+2025-01-07T18:43:00.4616964Z   retry-exempt-status-codes: 400,401,403,404,422
+2025-01-07T18:43:00.4617219Z env:
+2025-01-07T18:43:00.4617391Z   CODE_SCANNING_REF: refs/heads/master
+2025-01-07T18:43:00.4617663Z   CODE_SCANNING_IS_ANALYZING_DEFAULT_BRANCH: true
+2025-01-07T18:43:00.4625735Z   CODE_SCANNING_WORKFLOW_FILE: H4sIAAAAAAAA/6RX/0/byBL/PX/FPPdJJBJ23tOddJIrpLohQNo0pkm4tldV1mKPky3OrrtfCCmX//20uzaxAzRIxw8Iz87Ol898ZmZhZIUheAOe4cex1xGa+U703/t7WFC11NcB3iJTAWWlVjJIeYaJTAljlC0SoVli9GG77XAWQrZhZEXTTgfZbdgBGMSnw2Q2iCaT0eQ8mQ7PXmwYc2Nz38JolkSTaPzlL/NxOjyLrsbz5O00mgwuXmqZyoQwUmx+mo8Mc6ILlVwLwtLlUx4/xdP3Z+P4U3I2Gg9f6mPNxU1e8HWS08Ji0/nOr6UBxLlG8yeAQzpyIuga2yuiBL0LCsIWmizM3Z5VFZpJ3yBslHLBV+9m8aRbaQvNGIqeCx+gRLGiUlLOpPMDQFJlP0EgySpZyplCptrCkqQ3ZIFtocRUC6o2vk1ZhrAWVGGnNkKZRp8zH4XgIgQltDuTShCFi00dRE5o4edEqhByUkisxC6JWgmAsrTQGe4EAD7UgITwndwS/4argrKGBkBqfHGxCaH/oPyc7rWmReaveIYhMM6wdejQDOHoq6evNVPaL4hCqbxvR1VaWFbA+lUJB0tMb7hWILDkkiouNpVJLQ2WFfz9tNJ7c/t7p2VgxKiipKA/EVwrtq47wvUNx34UvjPWp4yqN7e/VYprqpY7xGoApOPLY1J1nkKioboTN5UzLJFlyNKNn5J0SdnCXXKIBchuqeBshUzByQkcubD9JZcKs6OmoR8aBTXReR68glPXhFa6AalrblX8yukihL8bJaqa1peodBm2asfFoi0AMEkUvuG1DOHrCxvYQZ3YW7DdwreGUbUUSJQFp7Amq9O6ljMTFpSC320g5wIELqhUJt/KCM1Cd3y4yFIRoXyr/Fytd+aTVGCGzBCpKrzEVKCSwflofnH1NpkOz0ez+XQ0nCWX0/jzFzuZmqFHWnFb+sORkVrVxNUycoki52JVEdmNN0nlC0y6QbhLtFoi7seM5Y9jF3hyEc/mVYqmGwOLUMC1srW0X4nhXZN0LQOX8fSggZKL5w0MomQwnM5HZ6NBNB8eMpWSJEWhaE7NmNoZbZdyN8IarVgLzaVXryC6msd+dPruajaHP6Px6DSaj+IJTK8mEE/GX1qVmGLKRQYznaYoZa4L4FqlfIVPDqeqXWUqaKne3P7RYGt1TT5Vlw/RfDr6nIyjyflVdD48MHHaCTtf7e5OucBAoootgN1ScBO8GS7BnqtAYFmQFKOi6Hq+dwxe4vWOwYvfe73XjpNVFWqPZh8kbh80K1an91C0hp7tEbO4s+9aqtbethIY2AmlBTEotnd1a33869X8iy3MEDNTSddAVkRzl6E9CqqTJxP8zwkcxe8f5nNjvTWZZHu9GsfNZB/xYf8BFV/NB/GHYfII+8OR1ePpxVzd59fTDDN4rceELSScwNdvrROaQ4tyB3OBkxOHXw/u9zZP7SUotVx2vcZjxOu1VBtp1jE83C2QLdTSevnfYxeWKpIXGBR80fUmfLf6YY0CQT70frGp+ZEFMLyjirJFsBeIpWid/R1V3f//MlCBsoQTIGtCVb1UBf7QKFXXu4zmgwvo2xdR/56vGYpt/958bu3c9+tl22/t875rNO/4Ua7WROh6406Z5ueBlR3vKZqTPT3za1+t8Uiq0d5XeXjHm/9zzCBsvB6cCLbb9qVt73XnufoYvAKpiNKy97rzTwAAAP//5o4S6nsNAAA=
+2025-01-07T18:43:00.4634200Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-01-07T18:43:00.4634470Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-01-07T18:43:00.4634726Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-01-07T18:43:00.4634985Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-01-07T18:43:00.4635237Z   CODEQL_ACTION_VERSION: 3.28.0
+2025-01-07T18:43:00.4635489Z   JOB_RUN_UUID: 1dbfc87a-112b-481b-b257-104c5ce956e4
+2025-01-07T18:43:00.4635760Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-01-07T18:43:00.4636098Z   CODEQL_ACTION_ANALYSIS_KEY: dynamic/github-code-scanning/codeql:analyze
+2025-01-07T18:43:00.4636483Z   CODEQL_WORKFLOW_STARTED_AT: 2025-01-07T18:41:47.008Z
+2025-01-07T18:43:00.4636743Z   CODEQL_RAM: 14567
+2025-01-07T18:43:00.4636933Z   CODEQL_THREADS: 4
+2025-01-07T18:43:00.4637179Z   CODEQL_ACTION_AUTOBUILD_DID_COMPLETE_SUCCESSFULLY: true
+2025-01-07T18:43:00.4637495Z   CODEQL_ACTION_SARIF_RESULTS_OUTPUT_DIR: ../results
+2025-01-07T18:43:00.4637941Z   CODEQL_UPLOAD_SARIF__LANGUAGE_JAVA_KOTLIN__CODEQL: CODEQL_UPLOAD_SARIF__LANGUAGE_JAVA_KOTLIN__CODEQL
+2025-01-07T18:43:00.4638686Z   CODEQL_ACTION_ANALYZE_DID_COMPLETE_SUCCESSFULLY: true
+2025-01-07T18:43:00.4639161Z   MATRIX_LANGUAGE: java-kotlin
+2025-01-07T18:43:00.4639497Z ##[endgroup]
+2025-01-07T18:43:00.5579887Z Post job cleanup.
+2025-01-07T18:43:00.9316045Z ##[group]Uploading combined SARIF debug artifact
+2025-01-07T18:43:00.9317996Z ##[endgroup]
+2025-01-07T18:43:00.9471810Z Post job cleanup.
+2025-01-07T18:43:01.3311084Z Post job cleanup.
+2025-01-07T18:43:01.7061030Z CodeQL job status was success.
+2025-01-07T18:43:01.8950928Z Post job cleanup.
+2025-01-07T18:43:01.9888692Z [command]/usr/bin/git version
+2025-01-07T18:43:01.9926732Z git version 2.47.1
+2025-01-07T18:43:01.9969774Z Temporarily overriding HOME='/home/runner/work/_temp/d353a7b5-0fc8-43b0-bb66-28d6dc080a75' before making global git config changes
+2025-01-07T18:43:01.9971060Z Adding repository directory to the temporary git global config as a safe directory
+2025-01-07T18:43:01.9976884Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java
+2025-01-07T18:43:02.0014370Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-01-07T18:43:02.0048636Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-01-07T18:43:02.0288098Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-01-07T18:43:02.0309728Z http.https://github.com/.extraheader
+2025-01-07T18:43:02.0322987Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-01-07T18:43:02.0354711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-01-07T18:43:02.0700639Z Evaluate and set job outputs
+2025-01-07T18:43:02.0704943Z Set output 'java_kotlin'
+2025-01-07T18:43:02.0706791Z Cleaning up orphan processes

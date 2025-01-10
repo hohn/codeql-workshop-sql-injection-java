@@ -79,34 +79,122 @@
 
    Then add this database directory to your VS Code =DATABASES= tab.
 
-** (old / optional) Build the codeql database in steps
+** (optional) Build the codeql database in steps
    For larger projects, using a single command to build everything is costly when
-   any part of the build fails.
+   any part of the build fails.  The sequence here is also used by the GHAS
+   default setup, so familiarity with it helps in reviewing logs. 
+
+   The purpose of these sections is to illustrate the codeql commands used in
+   default setup and making the connection between the GHAS default action and the
+   CodeQL CLI explicit. 
+
+   After running default setup and downloading the log, you will see the following
+   entries embedded in the full log, [[./logs/32779726737/0_Analyze
+   (java-kotlin).txt]].  They are repeated here for completeness; you can skip the
+   command-line options for now.
+   #+BEGIN_SRC sh 
+     codeql version --format=json
+
+     codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
+
+     codeql database init --force-overwrite --db-cluster /home/runner/work/_temp/codeql_databases --source-root=/home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java --extractor-include-aliases --language=java --codescanning-config=/home/runner/work/_temp/user-config.yaml --build-mode=none --calculate-language-specific-baseline --sublanguage-file-coverage
+
+     codeql database trace-command --use-build-mode --working-dir /home/runner/work/codeql-workshop-sql-injection-java/codeql-workshop-sql-injection-java /home/runner/work/_temp/codeql_databases/java
+
+     codeql database finalize --finalize-dataset --threads=4 --ram=14567 /home/runner/work/_temp/codeql_databases/java
+
+     codeql database run-queries --ram=14567 --threads=4 /home/runner/work/_temp/codeql_databases/java --expect-discarded-cache --min-disk-free=1024 -v --intra-layer-parallelism
+
+     codeql database cleanup /home/runner/work/_temp/codeql_databases/java --cache-cleanup=brutal
+
+     codeql database bundle /home/runner/work/_temp/codeql_databases/java --output=/home/runner/work/_temp/codeql_databases/java.zip --name=java
+   #+END_SRC
+
    
-   To build a database in steps, use the following sequence, adjusting paths to
-   your setup:
+   To build a database in steps locally, use the following sequence, adjusting
+   paths to your setup:
    #+BEGIN_SRC sh
      # Build the db with source commit id.
-     export PATH=$HOME/local/vmsync/codeql250:"$PATH"
-     SRCDIR=$HOME/local/codeql-training-material.java-sqli/java/codeql-dataflow-sql-injection
+
+     SRCDIR=$HOME/local/codeql-workshop-sql-injection-java/src
      DB=$SRCDIR/java-sqli-$(cd $SRCDIR && git rev-parse --short HEAD)
 
      # Check paths
-     echo $DB
-     echo $SRCDIR
+     echo "DB will be: $DB"
+     echo "SRC is in:  $SRCDIR"
 
      # Prepare db directory
      test -d "$DB" && rm -fR "$DB"
      mkdir -p "$DB"
 
-     # Run the build
+     # Run the build, without --db-cluster
+     #   Init database
      cd $SRCDIR
-     codeql database init --language=java -s . -v $DB
-     # Repeat trace-command as needed to cover all targets
-     codeql database trace-command -v $DB -- make 
-     codeql database finalize -j4 $DB
+     codeql database init                            \
+            --language=java                          \
+            --build-mode=none                        \
+            --source-root=.                          \
+            -v $DB
+
+     #   Repeat trace-command as needed to cover all targets
+     codeql database trace-command                   \
+            --use-build-mode                         \
+            --working-dir .                          \
+            $DB 
+
+     #   Finalize database
+     codeql database finalize                        \
+            --finalize-dataset                       \
+            --threads=4                              \
+            --ram=14567                              \
+            $DB
+
+     # Use the database; get the location
+     echo $DB
+     # /Users/hohn/local/codeql-workshop-sql-injection-java/src/java-sqli-161a1d5
    #+END_SRC
 
-   Then add this database directory to your VS Code =DATABASES= tab.
+   To also analyze the database just built, we use the log's command but add an
+   explicit query name:
+   #+BEGIN_SRC sh 
+     codeql database run-queries                     \
+            --ram=14567                              \
+            --threads=4 $DB                          \
+            --expect-discarded-cache                 \
+            --min-disk-free=1024                     \
+            -v                                       \
+            --intra-layer-parallelism                \
+            --                                       \
+            ../session/simple.ql                     
+
+
+   #+END_SRC
+
+   This only gives us a bqrs file, we want sarif.  Checking help:
+   #+BEGIN_SRC text
+     codeql database run-queries --help
+     Usage: codeql database run-queries [OPTIONS] -- <database> [<query|dir|suite|pack>...]
+     [Plumbing] Run a set of queries together.
+
+     Run one or more queries against a CodeQL database, saving the results to the results
+     subdirectory of the database directory.
+
+     The results can later be converted to readable formats by codeql database interpret-results,
+     or query-for-query by with codeql bqrs decode or codeql bqrs interpret.
+   #+END_SRC
+
+   So we run the following
+   #+BEGIN_SRC sh 
+     VERSION=$(cd $SRCDIR && git rev-parse --short HEAD)
+     codeql database interpret-results                                   \
+            --format=sarifv2.1.0                                         \
+            -o simple-$VERSION.sarif  \
+            -- $DB ../session/simple.ql
+
+     echo "Results in simple-$VERSION.sarif"
+   #+END_SRC
+   We kept the output for this sample in [[./simple-161a1d5.sarif]]
+
 
    
+
